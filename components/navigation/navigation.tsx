@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Logo from "../logo";
 import NavItems from "./nav-items";
-import "./navigation.css";
 import Offcanvas from "./offcanvas";
 import MenuIcon from "@/icons/menu";
 

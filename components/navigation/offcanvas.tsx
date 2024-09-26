@@ -12,7 +12,7 @@ const Offcanvas = ({ isMenuOpen, toggleMenu }: Props) => {
   return (
     <>
       <div
-        className="offcanvas"
+        className="transition-transform duration-300 ease-in-out fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 transform -translate-x-full"
         style={{
           ...(isMenuOpen && { transform: "none", visibility: "visible" }),
         }}
@@ -30,7 +30,7 @@ const Offcanvas = ({ isMenuOpen, toggleMenu }: Props) => {
       </div>
       {isMenuOpen && (
         <div
-          className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          className="fixed inset-0 bg-gray-500 bg-opacity-75"
           aria-hidden="true"
           onClick={toggleMenu}
         />

@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
         <hr className="mt-4 mb-6" />
-        <div className="flex flex-wrap gap-3 justify-center items-center text-sm">
+        <div className="flex flex-wrap gap-3 justify-center items-center text-sm text-gray-500">
           <Link href="/privacy-policy">Πολιτική Απορρήτου</Link>
           <Link href="/terms-and-conditions">Όροι Χρήσης</Link>
           <p className="ml-0 w-full sm:ml-auto sm:w-auto">
