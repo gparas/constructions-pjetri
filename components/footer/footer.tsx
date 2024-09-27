@@ -6,7 +6,7 @@ import FacebookIcon from "@/icons/facebook";
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <footer className="py-6 text-center">
+    <footer className="py-6 text-center bg-gray-100">
       <div className="container">
         <div className="flex flex-wrap justify-between items-center">
           <div className="w-full sm:w-auto">
@@ -39,11 +39,11 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <hr className="mt-4 mb-6" />
+        <hr className="mt-4 mb-6 border-gray-300" />
         <div className="flex flex-wrap gap-3 justify-center items-center text-sm text-gray-500">
           <Link href="/privacy-policy">Πολιτική Απορρήτου</Link>
           <Link href="/terms-and-conditions">Όροι Χρήσης</Link>
-          <p className="ml-0 w-full sm:ml-auto sm:w-auto">
+          <p className="ml-0 sm:ml-auto w-full sm:w-auto text-sm">
             Copyright © {date} pjerti
           </p>
         </div>

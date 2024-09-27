@@ -31,7 +31,7 @@ const FEATURES = [
 ];
 const Features = () => {
   return (
-    <section className="text-center bg-slate-50">
+    <section className="text-center bg-gray-50">
       <div className="container">
         <header className="flex flex-col w-full md:w-9/12 lg:w-7/12 items-center mb-12 md:mb-20 mx-auto gap-4">
           <h2>Ολοκληρωμένες Υπηρεσίες</h2>

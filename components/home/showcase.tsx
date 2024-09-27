@@ -10,49 +10,39 @@ const Showcase = () => {
     <section>
       <div className="container">
         <header className="mb-12 md:mb-20 text-center">
-          <h2 className="display-6 mb-6">Πρόσφατα Έργα μας</h2>
+          <h2 className="mb-2">Πρόσφατα Έργα Μας</h2>
           <p className="subtitle">Ποιότητα και καινοτομία σε κάθε μας έργο</p>
         </header>
-        <div className="row">
-          <div className="col-md-6 mb-6 mb-md-0">
-            <Link href="/projects" className="d-block h-100">
-              <Image
-                src={ImgOne}
-                alt="showcase-1"
-                className="d-block w-100 h-auto"
-              />
+        <div className="grid grid-rows-3 md:grid-rows-2 grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="row-span-2 md:col-span-2">
+            <Link
+              href="/projects"
+              className="hover:opacity-75 transition-opacity ease-in-out"
+            >
+              <Image src={ImgOne} alt="showcase-1" className="h-full" />
             </Link>
           </div>
-          <div className="col-md-6">
-            <div className="row">
-              <div className="col-6">
-                <Link href="/projects" className="d-block">
-                  <Image
-                    src={ImgTwo}
-                    alt="showcase-2"
-                    className="d-block w-100 h-auto"
-                  />
-                </Link>
-              </div>
-              <div className="col-6">
-                <Link href="/projects" className="d-block">
-                  <Image
-                    src={ImgThree}
-                    alt="showcase-3"
-                    className="d-block w-100 h-auto"
-                  />
-                </Link>
-              </div>
-              <div className="mt-6 col-12">
-                <Link href="/projects" className="d-block">
-                  <Image
-                    src={ImgFour}
-                    alt="showcase-4"
-                    className="d-block w-100 h-auto"
-                  />
-                </Link>
-              </div>
-            </div>
+          <div className="row-span-1 md:col-span-2 grid grid-cols-2 gap-4">
+            <Link
+              href="/projects"
+              className="hover:opacity-75 transition-opacity ease-in-out"
+            >
+              <Image src={ImgTwo} alt="showcase-2" />
+            </Link>
+            <Link
+              href="/projects"
+              className="hover:opacity-75 transition-opacity ease-in-out"
+            >
+              <Image src={ImgThree} alt="showcase-3" />
+            </Link>
+          </div>
+          <div className="row-span-1 md:col-span-2">
+            <Link
+              href="/projects"
+              className="hover:opacity-75 transition-opacity ease-in-out"
+            >
+              <Image src={ImgFour} alt="showcase-4" className="h-full" />
+            </Link>
           </div>
         </div>
       </div>
