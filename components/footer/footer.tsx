@@ -40,14 +40,10 @@ const Footer = () => {
           </div>
         </div>
         <hr className="mt-4 mb-6 border-gray-300" />
-        <div className="flex flex-wrap gap-3 justify-center items-center text-gray-600">
-          <Link href="/privacy-policy" className="text-sm">
-            Πολιτική Απορρήτου
-          </Link>
-          <Link href="/terms-and-conditions" className="text-sm">
-            Όροι Χρήσης
-          </Link>
-          <p className="ml-0 sm:ml-auto w-full sm:w-auto text-sm">
+        <div className="flex flex-wrap gap-3 justify-center items-center text-gray-600 text-sm">
+          <Link href="/privacy-policy">Πολιτική Απορρήτου</Link>
+          <Link href="/terms-and-conditions">Όροι Χρήσης</Link>
+          <p className="ml-0 sm:ml-auto w-full sm:w-auto">
             Copyright © {date} pjerti
           </p>
         </div>
