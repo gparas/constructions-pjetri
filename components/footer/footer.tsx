@@ -13,10 +13,10 @@ const Footer = () => {
             <Logo />
           </div>
           <div className="w-full sm:flex-1 mb-3 sm:mb-0">
-            <Link href="/services" className="font-medium p-2">
+            <Link href="/services" className="font-medium p-2 text-gray-800">
               Υπηρεσίες
             </Link>
-            <Link href="/projects" className="font-medium p-2">
+            <Link href="/projects" className="font-medium p-2 text-gray-800">
               Έργα
             </Link>
           </div>
@@ -40,9 +40,13 @@ const Footer = () => {
           </div>
         </div>
         <hr className="mt-4 mb-6 border-gray-300" />
-        <div className="flex flex-wrap gap-3 justify-center items-center text-sm text-gray-500">
-          <Link href="/privacy-policy">Πολιτική Απορρήτου</Link>
-          <Link href="/terms-and-conditions">Όροι Χρήσης</Link>
+        <div className="flex flex-wrap gap-3 justify-center items-center text-gray-600">
+          <Link href="/privacy-policy" className="text-sm">
+            Πολιτική Απορρήτου
+          </Link>
+          <Link href="/terms-and-conditions" className="text-sm">
+            Όροι Χρήσης
+          </Link>
           <p className="ml-0 sm:ml-auto w-full sm:w-auto text-sm">
             Copyright © {date} pjerti
           </p>
