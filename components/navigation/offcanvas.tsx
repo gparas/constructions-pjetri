@@ -16,7 +16,6 @@ const Offcanvas = ({ isMenuOpen, toggleMenu }: Props) => {
         style={{
           ...(isMenuOpen && { transform: "none", visibility: "visible" }),
         }}
-        aria-hidden="true"
       >
         <div className="flex items-center justify-between p-4">
           <Logo />

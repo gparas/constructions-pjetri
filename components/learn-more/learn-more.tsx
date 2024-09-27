@@ -7,7 +7,7 @@ const LearnMoreButton = ({ ...other }) => {
   return (
     <Link
       href="/anakainisi"
-      className="btn btn-action-1"
+      className="btn"
       onClick={() =>
         sendGAEvent({
           action: "click_button",

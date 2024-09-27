@@ -1,4 +1,8 @@
 import { Metadata } from "next";
+import Contact from "@/components/contact";
+import Header from "@/components/home/header";
+import Features from "@/components/home/features";
+import Showcase from "@/components/home/showcase";
 
 export const metadata: Metadata = {
   alternates: {
@@ -6,8 +10,15 @@ export const metadata: Metadata = {
   },
 };
 
-const HomePages = () => {
-  return <div>HomePages</div>;
+const HomePage = () => {
+  return (
+    <>
+      <Header />
+      <Features />
+      <Showcase />
+      <Contact />
+    </>
+  );
 };
 
-export default HomePages;
+export default HomePage;
