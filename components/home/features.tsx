@@ -1,5 +1,5 @@
 import ConstructionIcon from "@/icons/construction";
-import InsulationIcon from "@/icons/Insulation";
+import InsulationIcon from "@/icons/insulation";
 import RenovationIcon from "@/icons/renovation";
 import RoofIcon from "@/icons/roof";
 
