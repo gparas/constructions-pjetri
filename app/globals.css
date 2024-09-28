@@ -25,7 +25,8 @@
   .subtitle {
     @apply text-lg md:text-xl;
   }
-  section {
+  section,
+  .section {
     @apply py-12 lg:py-20;
   }
   .container {
