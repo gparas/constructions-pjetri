@@ -1,6 +1,4 @@
 import { Metadata } from "next";
-import Contact from "@/components/contact";
-import Header from "./header";
 import Features from "./features";
 
 export const metadata: Metadata = {
@@ -14,9 +12,7 @@ export const metadata: Metadata = {
 const ServicesPage = () => {
   return (
     <>
-      <Header />
       <Features />
-      <Contact />
     </>
   );
 };

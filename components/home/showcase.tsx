@@ -1,9 +1,11 @@
+import Link from "next/link";
 import Image from "next/image";
 import ImgOne from "@/assets/images/home/showcase-1.jpg";
 import ImgTwo from "@/assets/images/home/showcase-2.jpg";
 import ImgThree from "@/assets/images/home/showcase-3.jpg";
 import ImgFour from "@/assets/images/home/showcase-4.jpg";
-import Link from "next/link";
+
+import ShowcaseGrid from "../showcase-grid";
 
 const Showcase = () => {
   return (
@@ -13,38 +15,38 @@ const Showcase = () => {
           <h2 className="mb-2">Πρόσφατα Έργα Μας</h2>
           <p className="subtitle">Ποιότητα και καινοτομία σε κάθε μας έργο</p>
         </header>
-        <div className="grid grid-rows-3 md:grid-rows-2 grid-cols-1 md:grid-cols-4 gap-4">
-          <div className="row-span-2 md:col-span-2">
+        <ShowcaseGrid
+          items={[
             <Link
+              key="showcase-1"
               href="/projects"
               className="hover:opacity-75 transition-opacity ease-in-out"
             >
               <Image src={ImgOne} alt="showcase-1" className="h-full" />
-            </Link>
-          </div>
-          <div className="row-span-1 md:col-span-2 grid grid-cols-2 gap-4">
+            </Link>,
             <Link
+              key="showcase-2"
               href="/projects"
               className="hover:opacity-75 transition-opacity ease-in-out"
             >
               <Image src={ImgTwo} alt="showcase-2" />
-            </Link>
+            </Link>,
             <Link
+              key="showcase-3"
               href="/projects"
               className="hover:opacity-75 transition-opacity ease-in-out"
             >
               <Image src={ImgThree} alt="showcase-3" />
-            </Link>
-          </div>
-          <div className="row-span-1 md:col-span-2">
+            </Link>,
             <Link
+              key="showcase-4"
               href="/projects"
               className="hover:opacity-75 transition-opacity ease-in-out"
             >
               <Image src={ImgFour} alt="showcase-4" className="h-full" />
-            </Link>
-          </div>
-        </div>
+            </Link>,
+          ]}
+        />
       </div>
     </section>
   );

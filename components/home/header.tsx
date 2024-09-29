@@ -1,5 +1,4 @@
 import Illustration from "./illustration";
-import LearnMoreButton from "../learn-more/learn-more";
 
 const Header = () => {
   return (
@@ -11,11 +10,10 @@ const Header = () => {
           </div>
           <div className="w-full md:w-5/12">
             <h1 className="mb-4">Μεταμορφώστε το Χώρο σας</h1>
-            <p className="subtitle mb-8">
+            <p className="subtitle">
               Εξειδικευμένες λύσεις στην κατασκευή και ανακαίνιση οικιακών και
               επαγγελματικών χώρων με αφοσίωση στην ποιότητα και τη λεπτομέρεια.
             </p>
-            <LearnMoreButton />
           </div>
         </div>
       </div>
