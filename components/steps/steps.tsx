@@ -61,7 +61,7 @@ const Steps = () => {
 
   useEffect(() => {
     dispatch(actions.resetSteps());
-  }, []);
+  }, [dispatch]);
 
   const Step = steps[activeStep];
   const title = titles[activeStep];
