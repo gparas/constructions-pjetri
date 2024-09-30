@@ -4,6 +4,7 @@ import Kitchen from "./kitchen";
 import Bathroom from "./bathroom";
 import Insulation from "./insulation";
 import StoreRenovation from "./store-renovation";
+import Banner from "@/components/banner";
 
 export const metadata: Metadata = {
   title: "Έργα",
@@ -21,6 +22,7 @@ const ProjectsPage = () => {
       <Bathroom />
       <Insulation />
       <StoreRenovation />
+      <Banner />
     </>
   );
 };

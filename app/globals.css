@@ -35,4 +35,10 @@
   .btn {
     @apply bg-primary text-lg text-white font-medium py-3 px-6 rounded-md inline-flex items-center justify-center;
   }
+  .carousel {
+    -ms-overflow-style: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
 }

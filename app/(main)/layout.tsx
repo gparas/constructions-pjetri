@@ -1,7 +1,6 @@
 import Navigation from "@/components/navigation";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import Banner from "@/components/banner";
 
 const MainLayout = ({
   children,
@@ -12,7 +11,6 @@ const MainLayout = ({
     <>
       <Navigation />
       <main className="flex-grow">{children}</main>
-      <Banner />
       <Contact />
       <Footer />
     </>
