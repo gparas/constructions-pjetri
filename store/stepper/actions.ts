@@ -1,6 +1,7 @@
 import slice from "./slice";
 
-const { changeActiveStep, changeValue, changeWorkType } = slice.actions;
+const { changeActiveStep, changeValue, changeWorkType, resetSteps } =
+  slice.actions;
 
 const changeRenovationType = (value: string) =>
   changeValue({ step: "renovationType", value });
@@ -24,6 +25,7 @@ const actions = {
   changeWorkType,
   changeTimeframe,
   changeBudget,
+  resetSteps,
 };
 
 export default actions;

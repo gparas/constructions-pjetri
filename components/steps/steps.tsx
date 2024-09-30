@@ -1,8 +1,9 @@
 "use client";
 
+import { useEffect } from "react";
 import dynamic from "next/dynamic";
-import { useSelector } from "react-redux";
-import { selectors } from "@/store/stepper";
+import { useDispatch, useSelector } from "react-redux";
+import { actions, selectors } from "@/store/stepper";
 import Loader from "../loader";
 
 const RenovationType = dynamic(() => import("./renovation-type"), {
@@ -55,7 +56,12 @@ const subtitles = [
 ];
 
 const Steps = () => {
+  const dispatch = useDispatch();
   const activeStep = useSelector(selectors.getActiveStep);
+
+  useEffect(() => {
+    dispatch(actions.resetSteps());
+  }, []);
 
   const Step = steps[activeStep];
   const title = titles[activeStep];

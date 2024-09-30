@@ -35,6 +35,7 @@ const slice = createSlice({
         ? allWorks.filter((item) => item !== work)
         : [...allWorks, work];
     },
+    resetSteps: (state) => Object.assign(state, initialState),
   },
 });
 

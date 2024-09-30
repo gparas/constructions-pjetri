@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     "Ευχαριστούμε που υποβάλατε τα στοιχεία σας! Η ομάδα μας θα επικοινωνήσει σύντομα μαζί σας με μια εξατομικευμένη προσφορά για την ανακαίνισή σας.",
   alternates: {
-    canonical: "/thank-you/",
+    canonical: "/prosfora/thank-you/",
   },
 };
 
