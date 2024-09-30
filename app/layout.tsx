@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title:
     "Pjetri – Κατασκευές | Ανακαινίσεις | Μονώσεις | Ελαιοχρωματισμοί | Κεραμοσκεπές",
   description: "Αναλαμβάνουμε κάθε έργο με αφοσίωση και εξειδίκευση.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
 };
 
 export default function RootLayout({

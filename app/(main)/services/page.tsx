@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Υπηρεσίες",
   description: "Δείτε τις υπηρεσίες που προσφέρουμε.",
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/services`,
+    canonical: "/services/",
   },
 };
 

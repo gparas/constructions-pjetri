@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Έργα",
   description: "Δείτε τα έργα που έχουμε ολοκληρώσει.",
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/projects`,
+    canonical: "/projects/",
   },
 };
 

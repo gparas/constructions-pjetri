@@ -7,11 +7,11 @@ import Faq from "./faq";
 import Carousel from "./carousel";
 
 export const metadata: Metadata = {
-  title: "Ανακαίνιση Χώρου | Ανακαινίστε τον Χώρο σας με Ασφάλεια",
+  title: "Ανακαίνιση",
   description:
     "Ανακαινίστε τον χώρο σας με ασφάλεια και σιγουριά. Αναλαμβάνουμε κάθε έργο με αφοσίωση και εξειδίκευση. Λάβετε προσφορά για την ανακαίνιση του χώρου σας μέσα σε 24 ώρες.",
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_BASE_URL}/anakainisi`,
+    canonical: "/anakainisi/",
   },
 };
 

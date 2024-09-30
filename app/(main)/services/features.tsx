@@ -86,9 +86,7 @@ const Features = () => {
                   height={48}
                   className="fill-primary mx-auto md:mx-0"
                 />
-                <h3 className="mb-4 mt-6 text-xl font-semibold">
-                  {feature.title}
-                </h3>
+                <h3 className="mb-4 mt-6 text-xl">{feature.title}</h3>
                 <p>{feature.description}</p>
               </div>
             );

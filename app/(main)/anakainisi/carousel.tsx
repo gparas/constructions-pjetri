@@ -31,6 +31,7 @@ const Carousel = () => {
           {ITEMS.map((item, index) => (
             <Image
               key={index}
+              priority={index === 0}
               src={item.src}
               alt={item.alt}
               placeholder="blur"

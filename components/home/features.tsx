@@ -46,9 +46,7 @@ const Features = () => {
             return (
               <div key={index}>
                 <Icon width={64} height={64} className="fill-primary mx-auto" />
-                <h3 className="mb-4 mt-6 text-xl font-semibold">
-                  {feature.title}
-                </h3>
+                <h3 className="mb-4 mt-6 text-xl">{feature.title}</h3>
                 <p>{feature.description}</p>
               </div>
             );

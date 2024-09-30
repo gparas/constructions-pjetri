@@ -6,16 +6,22 @@ const CONTACT_INFO = [
   {
     title: "Καλέστε Μας",
     description: "+30 699 7833718",
+    href: "tel:+306997833718",
+    target: "",
     icon: PhoneIcon,
   },
   {
     title: "Επισκεφθείτε Μας",
     description: "Ρουμπέση 68, Νέος Κόσμος, 11744",
+    href: "https://www.google.com/maps/dir/37.9433929,23.7220232/constructions-pjetri/@37.9470022,23.7137064,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x14a1bd24e7ba30a7:0x7d02add3c5cafb6d!2m2!1d23.7265408!2d37.9532356?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D",
+    target: "_blank",
     icon: LocationIcon,
   },
   {
     title: "Στείλτε Μας Email",
     description: "info@constructions-pjetri.gr",
+    href: "mailto:info@constructions-pjetri.gr",
+    target: "",
     icon: EmailIcon,
   },
 ];
@@ -35,10 +41,14 @@ const Contact = () => {
             return (
               <div key={index}>
                 <Icon width={40} height={40} className="fill-primary mx-auto" />
-                <h3 className="mb-1 mt-6 text-lg font-semibold">
-                  {item.title}
-                </h3>
-                <p>{item.description}</p>
+                <h3 className="mb-1 mt-6 text-lg">{item.title}</h3>
+                <a
+                  href={item.href}
+                  target={item.target}
+                  rel="noopener noreferrer"
+                >
+                  {item.description}
+                </a>
               </div>
             );
           })}
