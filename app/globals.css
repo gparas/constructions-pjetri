@@ -42,4 +42,7 @@
   .carousel::-webkit-scrollbar {
     display: none;
   }
+  ul {
+    @apply list-disc ps-8;
+  }
 }

@@ -10,13 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/services/`,
+      url: `${baseUrl}/anakainisi/`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 0.8,
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/anakainisi/`,
+      url: `${baseUrl}/services/`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.8,
