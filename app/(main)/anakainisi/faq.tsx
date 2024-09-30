@@ -12,7 +12,7 @@ const Faq = () => {
   return (
     <section>
       <div className="container md:max-w-2xl">
-        <h2 className="mb-12 lg:text-center">Συχνές Ερωτήσεις</h2>
+        <h2 className="mb-6 lg:text-center">Συχνές Ερωτήσεις</h2>
         {FAQ.map((faq, index) => {
           const isExpanded = expanded === index;
           return (
