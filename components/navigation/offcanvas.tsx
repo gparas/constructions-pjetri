@@ -24,7 +24,7 @@ const Offcanvas = ({ isMenuOpen, toggleMenu }: Props) => {
           </button>
         </div>
         <div className="flex flex-grow overflow-y-auto flex-col p-4">
-          <NavItems />
+          <NavItems onClick={toggleMenu} />
         </div>
       </div>
       {isMenuOpen && (

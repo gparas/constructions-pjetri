@@ -1,9 +1,20 @@
+"use client";
+
 import Link from "next/link";
 import { NAVIGATION_ITEMS } from "./constants";
 
-const NavItems = () => {
+interface Props {
+  onClick?: () => void;
+}
+
+const NavItems = ({ onClick }: Props) => {
   return NAVIGATION_ITEMS.map((item) => (
-    <Link key={item.href} href={item.href} className="p-2 heading">
+    <Link
+      key={item.href}
+      href={item.href}
+      className="p-2 heading"
+      onClick={onClick}
+    >
       {item.label}
     </Link>
   ));

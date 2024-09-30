@@ -1,25 +1,10 @@
-"use client";
-
-import { sendGAEvent } from "@next/third-parties/google";
+import Link from "next/link";
 
 const OfferButton = ({ ...other }) => {
   return (
-    <a
-      href="https://anakainisi.constructions-pjetri.gr"
-      className="btn btn-action-1"
-      target="_blank"
-      onClick={() =>
-        sendGAEvent({
-          action: "click_button",
-          category: "interaction",
-          label: "offer",
-          value: "anakainisi.constructions-pjetri.gr",
-        })
-      }
-      {...other}
-    >
+    <Link href="/prosfora/" className="btn btn-action-1" {...other}>
       Ζητήστε Προσφορά
-    </a>
+    </Link>
   );
 };
 
