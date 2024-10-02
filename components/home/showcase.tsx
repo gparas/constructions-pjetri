@@ -20,7 +20,7 @@ const Showcase = () => {
             <Link
               key="showcase-1"
               href="/projects"
-              className="hover:opacity-75 transition-opacity ease-in-out"
+              className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image
                 src={ImgOne}
@@ -33,7 +33,7 @@ const Showcase = () => {
             <Link
               key="showcase-2"
               href="/projects"
-              className="hover:opacity-75 transition-opacity ease-in-out"
+              className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image
                 src={ImgTwo}
@@ -45,7 +45,7 @@ const Showcase = () => {
             <Link
               key="showcase-3"
               href="/projects"
-              className="hover:opacity-75 transition-opacity ease-in-out"
+              className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image
                 src={ImgThree}
@@ -57,7 +57,7 @@ const Showcase = () => {
             <Link
               key="showcase-4"
               href="/projects"
-              className="hover:opacity-75 transition-opacity ease-in-out"
+              className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image
                 src={ImgFour}

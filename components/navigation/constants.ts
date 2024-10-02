@@ -11,4 +11,8 @@ export const NAVIGATION_ITEMS = [
     href: "/projects",
     label: "Έργα",
   },
+  {
+    href: "/blog",
+    label: "blog",
+  },
 ];
