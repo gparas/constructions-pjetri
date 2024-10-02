@@ -25,7 +25,7 @@ const Faq = () => {
                 <ChevronDownIcon
                   width={24}
                   height={24}
-                  className="transition-transform"
+                  className="transition-transform flex-shrink-0"
                   style={{
                     ...(isExpanded && { transform: "rotate(180deg)" }),
                   }}
