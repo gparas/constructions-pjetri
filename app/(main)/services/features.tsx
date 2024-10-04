@@ -67,11 +67,11 @@ const FEATURES = [
 
 const Features = () => {
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <header className="mb-12 md:mb-20 text-center lg:w-2/3 xl:w-1/2 mx-auto">
           <h2 className="mb-3">Υψηλής Ποιότητας Υπηρεσίες</h2>
-          <p className="subtitle">
+          <p className="text-lg md:text-xl">
             Από το 2005, ειδικευόμαστε στην κατασκευή και ανακαίνιση κατοικιών,
             πολυκατοικιών και επαγγελματικών χώρων.
           </p>

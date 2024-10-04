@@ -6,11 +6,11 @@ import ImgFour from "@/assets/images/projects/project-2-4.jpg";
 
 const Kitchen = () => {
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <header className="mb-12 md:mb-20 text-center md:w-2/3 xl:w-1/2 mx-auto">
           <h2 className="mb-2">Ανακαίνιση Κουζίνας</h2>
-          <p className="subtitle">
+          <p className="text-lg md:text-xl">
             Παρέχουμε ολοκληρωμένες λύσεις που καλύπτουν κάθε ανάγκη
           </p>
         </header>

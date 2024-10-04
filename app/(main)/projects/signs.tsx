@@ -8,11 +8,11 @@ import ShowcaseGrid from "@/components/showcase-grid";
 
 const Signs = () => {
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <header className="mb-12 md:mb-20 text-center md:w-2/3 xl:w-1/2 mx-auto">
           <h2 className="mb-2">Σημάνσεις</h2>
-          <p className="subtitle">
+          <p className="text-lg md:text-xl">
             Καλύπτουμε κάθε ανάγκη με προσαρμοσμένες λύσεις σήμανσης με υλικά
             που εγγυώνται αντοχή και ορατότητα.
           </p>

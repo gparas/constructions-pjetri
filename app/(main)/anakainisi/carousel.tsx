@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import First from "@/assets/images/anakainisi/showcase-1.jpg";
 import Second from "@/assets/images/anakainisi/showcase-2.jpg";
@@ -27,7 +29,13 @@ const Carousel = () => {
   return (
     <section className="py-8">
       <div className="container">
-        <div className="carousel flex flex-nowrap overflow-x-auto gap-4 snap-x snap-mandatory scroll-smooth">
+        <div
+          className="carousel  flex flex-nowrap gap-4"
+          style={{
+            overflowX: "auto",
+            scrollSnapType: "x mandatory",
+          }}
+        >
           {ITEMS.map((item, index) => (
             <Image
               key={index}
@@ -35,9 +43,20 @@ const Carousel = () => {
               src={item.src}
               alt={item.alt}
               placeholder="blur"
-              className="rounded-md w-10/12 lg:w-5/12 snap-center"
+              className="rounded-md w-10/12 lg:w-5/12"
+              style={{
+                scrollSnapAlign: "center",
+              }}
             />
           ))}
+          <style jsx>{`
+            .carousel {
+              -ms-overflow-style: none;
+            }
+            .carousel::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
         </div>
       </div>
     </section>

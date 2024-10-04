@@ -5,11 +5,11 @@ import ImgThree from "@/assets/images/projects/project-1-3.jpg";
 
 const House = () => {
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <header className="mb-12 md:mb-20 text-center md:w-2/3 xl:w-1/2 mx-auto">
           <h2 className="mb-2">Ανακαίνιση Διαμερίσματος</h2>
-          <p className="subtitle">
+          <p className="text-lg md:text-xl">
             Ανανεώστε το διαμέρισμά σας με τις κατασκευαστικές και αισθητικές
             λύσεις που προσφέρουμε.
           </p>

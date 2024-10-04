@@ -21,7 +21,7 @@ const Budget = () => {
           return (
             <div key={option}>
               <input
-                className="hidden peer"
+                className="hidden"
                 type="radio"
                 name="options"
                 id={`option-${index}`}
@@ -34,7 +34,7 @@ const Budget = () => {
                 className="custom-check-label items-start p-4"
                 htmlFor={`option-${index}`}
               >
-                <span className="text-gray-600">{option}</span>
+                <span>{option}</span>
               </label>
             </div>
           );

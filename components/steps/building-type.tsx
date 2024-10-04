@@ -24,7 +24,7 @@ const BuildingType = () => {
           return (
             <div key={option}>
               <input
-                className="hidden peer"
+                className="hidden"
                 type="radio"
                 name="options"
                 id={`option-${index}`}
@@ -35,9 +35,7 @@ const BuildingType = () => {
               />
               <label className="custom-check-label" htmlFor={`option-${index}`}>
                 <Icon width={64} height={64} />
-                <span className="block text-center truncate w-full text-gray-600">
-                  {option}
-                </span>
+                <span>{option}</span>
               </label>
             </div>
           );

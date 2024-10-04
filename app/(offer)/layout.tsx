@@ -2,6 +2,8 @@ import React from "react";
 import StoreProvider from "./StoreProvider";
 import Logo from "@/components/logo";
 
+import "./styles.css";
+
 const OfferLayout = ({
   children,
 }: Readonly<{

@@ -70,7 +70,7 @@ const Steps = () => {
     <div className="flex flex-col flex-grow  gap-10">
       <header className="text-center">
         {title && <h1 className="mb-2">{title}</h1>}
-        <p className="subtitle">{subtitle}</p>
+        <p className="text-lg md:text-xl">{subtitle}</p>
       </header>
       <Step />
     </div>

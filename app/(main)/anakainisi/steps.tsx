@@ -18,14 +18,14 @@ const STEPS = [
 
 const Steps = () => {
   return (
-    <section className="bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-6 w-full lg:w-10/12 mx-auto">
           <div className="lg:col-span-3">
             <h2 className="mb-3">
               Τα Βασικά Βήματα για την Ολοκλήρωση της Ανακαίνισής σας
             </h2>
-            <p className="subtitle mb-4">
+            <p className="text-lg md:text-xl mb-4">
               Από την ιδέα στην πράξη. Ανακαινίστε με ασφάλεια και σιγουριά σε
               κάθε βήμα
             </p>

@@ -31,11 +31,11 @@ const FEATURES = [
 ];
 const Features = () => {
   return (
-    <section className="text-center bg-gray-50">
+    <section className="py-12 text-center bg-gray-50">
       <div className="container">
         <header className="flex flex-col w-full md:w-9/12 lg:w-7/12 items-center mb-12 md:mb-20 mx-auto gap-4">
           <h2>Ολοκληρωμένες Υπηρεσίες</h2>
-          <p className="subtitle">
+          <p className="text-lg md:text-xl">
             Προσφέρουμε αξιόπιστες λύσεις διασφαλίζοντας την ανθεκτικότητα και
             την ομορφιά του χώρου σας με προσοχή στις λεπτομέρειες.
           </p>

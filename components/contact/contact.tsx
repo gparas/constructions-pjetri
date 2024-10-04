@@ -27,11 +27,11 @@ const CONTACT_INFO = [
 ];
 const Contact = () => {
   return (
-    <section className="text-center">
+    <section className="py-12 text-center">
       <div className="container">
         <header className="mb-12">
           <h2 className="mb-2">Επικοινωνήστε Μαζί Μας</h2>
-          <p className="subtitle">
+          <p className="text-lg md:text-xl">
             Είμαστε εδώ για να απαντήσουμε σε κάθε σας ερώτηση.
           </p>
         </header>

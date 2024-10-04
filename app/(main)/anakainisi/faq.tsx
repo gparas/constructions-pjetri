@@ -10,7 +10,7 @@ const Faq = () => {
     setExpanded(expanded === index ? null : index);
 
   return (
-    <section>
+    <section className="py-12">
       <div className="container md:max-w-2xl">
         <h2 className="mb-6 lg:text-center">Συχνές Ερωτήσεις</h2>
         {FAQ.map((faq, index) => {

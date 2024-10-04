@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="el" className="h-full">
-      <body className="h-full flex flex-col">
+      <body className="h-full flex flex-col text-gray-600 text-base">
         {children}
         <CookieBanner />
       </body>

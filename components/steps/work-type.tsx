@@ -30,12 +30,12 @@ const WorkType = () => {
           return (
             <div key={option} className="flex items-center gap-2">
               <input
-                className="form-check-input"
                 type="checkbox"
                 value={option}
                 id={`option-${index}`}
                 defaultChecked={workType.includes(option)}
                 onChange={handleChange}
+                className="form-check-input"
               />
               <label className="text-base" htmlFor={`option-${index}`}>
                 {option}
