@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { FAQ } from "./constants";
 import ChevronDownIcon from "@/icons/chevron-down";
+import { FAQ } from "./constants";
 
 const Faq = () => {
   const [expanded, setExpanded] = useState<number | null>(null);

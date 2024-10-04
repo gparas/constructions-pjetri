@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
+import { getCldOgImageUrl } from "next-cloudinary";
 import ReactMarkdown from "markdown-to-jsx";
 import PostHeader from "@/components/blog/post-header";
 import PostBanner from "@/components/blog/post-banner";
@@ -21,7 +22,16 @@ export function generateMetadata({ params }: Params): Metadata {
     },
     openGraph: {
       title,
-      images: [post.ogImage.url],
+      images: [
+        {
+          url: getCldOgImageUrl({
+            src: post.coverImage,
+            crop: "fill",
+            width: 1200,
+            height: 630,
+          }),
+        },
+      ],
     },
   };
 }

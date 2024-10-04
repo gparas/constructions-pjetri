@@ -1,25 +1,24 @@
+"use client";
+
 import cn from "classnames";
 import Link from "next/link";
-import Image from "next/image";
+import { CldImage, CldImageProps } from "next-cloudinary";
 
-type Props = {
+interface Props extends CldImageProps {
   title: string;
-  src: string;
-  priority?: boolean;
   slug?: string;
-};
+}
 
-const CoverImage = ({ title, src, slug, priority }: Props) => {
+const CoverImage = ({ title, slug, ...other }: Props) => {
   const image = (
-    <Image
-      src={src}
-      priority={priority}
-      alt={`Cover Image for ${title}`}
+    <CldImage
       className={cn("w-full rounded-lg", {
         "hover:opacity-75 transition-opacity duration-200": slug,
       })}
-      width={1200}
-      height={630}
+      width={1092}
+      height={572}
+      crop="fill"
+      {...other}
     />
   );
   return slug ? (

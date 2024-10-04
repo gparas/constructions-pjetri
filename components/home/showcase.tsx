@@ -1,10 +1,7 @@
-import Link from "next/link";
-import Image from "next/image";
-import ImgOne from "@/assets/images/home/showcase-1.jpg";
-import ImgTwo from "@/assets/images/home/showcase-2.jpg";
-import ImgThree from "@/assets/images/home/showcase-3.jpg";
-import ImgFour from "@/assets/images/home/showcase-4.jpg";
+"use client";
 
+import Link from "next/link";
+import { CldImage } from "next-cloudinary";
 import ShowcaseGrid from "../showcase-grid";
 
 const Showcase = () => {
@@ -22,12 +19,15 @@ const Showcase = () => {
               href="/projects"
               className="hover:opacity-75 transition-opacity duration-200"
             >
-              <Image
-                src={ImgOne}
+              <CldImage
+                src="constructions-pjetri/home/showcase-1.jpg"
                 alt="showcase-1"
                 className="h-full"
-                placeholder="blur"
-                sizes="(min-width: 768px) 50vw, 100vw"
+                width={538}
+                height={538}
+                crop="fill"
+                gravity="center"
+                sizes="(min-width: 1200px) 538px, (min-width: 1000px) 448px, (min-width: 780px) 328px, (min-width: 580px) 492px, calc(100vw - 48px)"
               />
             </Link>,
             <Link
@@ -35,11 +35,13 @@ const Showcase = () => {
               href="/projects"
               className="hover:opacity-75 transition-opacity duration-200"
             >
-              <Image
-                src={ImgTwo}
+              <CldImage
+                src="constructions-pjetri/home/showcase-2.jpg"
                 alt="showcase-2"
-                placeholder="blur"
-                sizes="(min-width: 768px) 25vw, 50vw"
+                width={261}
+                height={261}
+                crop="fill"
+                sizes="(min-width: 1200px) 261px, (min-width: 1000px) 216px, (min-width: 780px) 156px, (min-width: 580px) 238px, calc(50vw - 32px)"
               />
             </Link>,
             <Link
@@ -47,11 +49,13 @@ const Showcase = () => {
               href="/projects"
               className="hover:opacity-75 transition-opacity duration-200"
             >
-              <Image
-                src={ImgThree}
+              <CldImage
+                src="constructions-pjetri/home/showcase-3.jpg"
                 alt="showcase-3"
-                placeholder="blur"
-                sizes="(min-width: 768px) 25vw, 50vw"
+                width={261}
+                height={261}
+                crop="fill"
+                sizes="(min-width: 1200px) 261px, (min-width: 1000px) 216px, (min-width: 780px) 156px, (min-width: 580px) 238px, calc(50vw - 32px)"
               />
             </Link>,
             <Link
@@ -59,11 +63,13 @@ const Showcase = () => {
               href="/projects"
               className="hover:opacity-75 transition-opacity duration-200"
             >
-              <Image
-                src={ImgFour}
+              <CldImage
+                src="constructions-pjetri/home/showcase-4.jpg"
                 alt="showcase-4"
-                placeholder="blur"
-                sizes="(min-width: 768px) 50vw, 100vw"
+                width={538}
+                height={261}
+                crop="fill"
+                sizes="(min-width: 1200px) 538px, (min-width: 1000px) 448px, (min-width: 780px) 328px, (min-width: 580px) 492px, calc(100vw - 48px)"
               />
             </Link>,
           ]}
