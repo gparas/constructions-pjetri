@@ -1,23 +1,30 @@
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid2";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+
 import Illustration from "./illustration";
 
 const Header = () => {
   return (
-    <header className="py-12">
-      <div className="container">
-        <div className="flex flex-wrap items-center md:flex-row-reverse gap-y-6">
-          <div className="w-full md:w-7/12">
+    <Box component="section" py={6}>
+      <Container>
+        <Grid container spacing={2} alignItems="center">
+          <Grid size={{ xs: 12, md: 7 }}>
             <Illustration />
-          </div>
-          <div className="w-full md:w-5/12">
-            <h1 className="mb-4">Μεταμορφώστε το Χώρο σας</h1>
-            <p className="text-lg md:text-xl">
+          </Grid>
+          <Grid size={{ xs: 12, md: 5 }} order={{ md: -1 }}>
+            <Typography variant="h1" mb={2}>
+              Μεταμορφώστε το Χώρο σας
+            </Typography>
+            <Typography component="p" variant="subtitle1">
               Εξειδικευμένες λύσεις στην κατασκευή και ανακαίνιση οικιακών και
               επαγγελματικών χώρων με αφοσίωση στην ποιότητα και τη λεπτομέρεια.
-            </p>
-          </div>
-        </div>
-      </div>
-    </header>
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 

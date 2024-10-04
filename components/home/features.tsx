@@ -1,3 +1,8 @@
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid2";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+
 import ConstructionIcon from "@/icons/construction";
 import InsulationIcon from "@/icons/insulation";
 import RenovationIcon from "@/icons/renovation";
@@ -31,29 +36,38 @@ const FEATURES = [
 ];
 const Features = () => {
   return (
-    <section className="py-12 text-center bg-gray-50">
-      <div className="container">
-        <header className="flex flex-col w-full md:w-9/12 lg:w-7/12 items-center mb-12 md:mb-20 mx-auto gap-4">
-          <h2>Ολοκληρωμένες Υπηρεσίες</h2>
-          <p className="text-lg md:text-xl">
+    <Box component="section" py={6} textAlign="center">
+      <Container>
+        <Box component="header" mb={[3, 6]}>
+          <Typography variant="h2" mb={2}>
+            Ολοκληρωμένες Υπηρεσίες
+          </Typography>
+          <Typography
+            component="p"
+            variant="subtitle1"
+            maxWidth={540}
+            mx="auto"
+          >
             Προσφέρουμε αξιόπιστες λύσεις διασφαλίζοντας την ανθεκτικότητα και
             την ομορφιά του χώρου σας με προσοχή στις λεπτομέρειες.
-          </p>
-        </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-5">
+          </Typography>
+        </Box>
+        <Grid container spacing={4}>
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index}>
-                <Icon width={64} height={64} className="fill-primary mx-auto" />
-                <h3 className="mb-4 mt-6 text-xl">{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
+              <Grid key={index} size={{ xs: 12, md: 6 }} mb={2}>
+                <Icon color="primary" sx={{ fontSize: 64, mb: 1 }} />
+                <Typography variant="h5" component="h3" mb={1}>
+                  {feature.title}
+                </Typography>
+                <Typography>{feature.description}</Typography>
+              </Grid>
             );
           })}
-        </div>
-      </div>
-    </section>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 

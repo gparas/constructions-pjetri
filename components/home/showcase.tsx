@@ -1,5 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid2";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+
 import ImgOne from "@/assets/images/home/showcase-1.jpg";
 import ImgTwo from "@/assets/images/home/showcase-2.jpg";
 import ImgThree from "@/assets/images/home/showcase-3.jpg";
@@ -9,14 +14,16 @@ import ShowcaseGrid from "../showcase-grid";
 
 const Showcase = () => {
   return (
-    <section className="py-12">
-      <div className="container">
-        <header className="mb-12 md:mb-20 text-center">
-          <h2 className="mb-2">Πρόσφατα Έργα Μας</h2>
-          <p className="text-lg md:text-xl">
+    <Box component="section" py={6}>
+      <Container>
+        <Box component="header" mb={[3, 6]}>
+          <Typography variant="h2" gutterBottom align="center">
+            Πρόσφατα Έργα Μας
+          </Typography>
+          <Typography component="p" variant="subtitle1" align="center">
             Ποιότητα και καινοτομία σε κάθε μας έργο
-          </p>
-        </header>
+          </Typography>
+        </Box>
         <ShowcaseGrid
           items={[
             <Link
@@ -70,8 +77,8 @@ const Showcase = () => {
             </Link>,
           ]}
         />
-      </div>
-    </section>
+      </Container>
+    </Box>
   );
 };
 
