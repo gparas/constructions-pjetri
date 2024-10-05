@@ -1,3 +1,4 @@
+import { grey } from "@mui/material/colors";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
 import Container from "@mui/material/Container";
@@ -36,16 +37,16 @@ const FEATURES = [
 ];
 const Features = () => {
   return (
-    <Box component="section" py={6} textAlign="center">
+    <Box component="section" py={6} textAlign="center" bgcolor={grey[50]}>
       <Container>
-        <Box component="header" mb={[3, 6]}>
+        <Box component="header" mb={[4, 8]}>
           <Typography variant="h2" mb={2}>
             Ολοκληρωμένες Υπηρεσίες
           </Typography>
           <Typography
             component="p"
             variant="subtitle1"
-            maxWidth={540}
+            maxWidth={768}
             mx="auto"
           >
             Προσφέρουμε αξιόπιστες λύσεις διασφαλίζοντας την ανθεκτικότητα και
@@ -56,7 +57,7 @@ const Features = () => {
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <Grid key={index} size={{ xs: 12, md: 6 }} mb={2}>
+              <Grid key={index} size={{ xs: 12, md: 6, lg: 3 }} mb={2}>
                 <Icon color="primary" sx={{ fontSize: 64, mb: 1 }} />
                 <Typography variant="h5" component="h3" mb={1}>
                   {feature.title}

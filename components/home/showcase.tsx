@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid2";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
@@ -17,11 +16,11 @@ const Showcase = () => {
     <Box component="section" py={6}>
       <Container>
         <Box component="header" mb={[3, 6]}>
-          <Typography variant="h2" gutterBottom align="center">
+          <Typography variant="h2" align="center">
             Πρόσφατα Έργα Μας
           </Typography>
           <Typography component="p" variant="subtitle1" align="center">
-            Ποιότητα και καινοτομία σε κάθε μας έργο
+            Ποιότητα και καινοτομία σε κάθε έργο
           </Typography>
         </Box>
         <ShowcaseGrid

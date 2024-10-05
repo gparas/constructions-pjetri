@@ -1,25 +1,17 @@
-"use client";
-
-import { sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
+import Button from "@mui/material/Button";
 
-const LearnMoreButton = ({ ...other }) => {
+const LearnMoreButton = () => {
   return (
-    <Link
+    <Button
+      component={Link}
       href="/anakainisi"
-      className="btn"
-      onClick={() =>
-        sendGAEvent({
-          action: "click_button",
-          category: "interaction",
-          label: "learn_more",
-          value: "/anakainisi",
-        })
-      }
-      {...other}
+      variant="contained"
+      size="large"
+      disableElevation
     >
       Μάθετε περισσότερα
-    </Link>
+    </Button>
   );
 };
 

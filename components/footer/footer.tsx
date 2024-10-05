@@ -1,57 +1,89 @@
+import { grey } from "@mui/material/colors";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid2";
+import Container from "@mui/material/Container";
+import Divider from "@mui/material/Divider";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
 import Link from "next/link";
-import Logo from "../logo";
+
 import InstagramIcon from "@/icons/instagram";
 import FacebookIcon from "@/icons/facebook";
+
+import Logo from "../logo";
 
 const Footer = () => {
   const date = new Date().getFullYear();
   return (
-    <footer className="py-6 text-center bg-gray-100">
-      <div className="container">
-        <div className="flex flex-wrap justify-between items-center">
-          <div className="w-full sm:w-auto">
+    <Box component="footer" pt={2} pb={3} bgcolor={grey[100]}>
+      <Container>
+        <Grid container alignItems="center" textAlign="center">
+          <Grid size={{ xs: 12, md: "auto" }}>
             <Logo />
-          </div>
-          <div className="w-full sm:flex-1 mb-3 sm:mb-0">
-            <Link href="/services" className="font-medium p-2 text-gray-800">
+          </Grid>
+          <Grid size={{ xs: 12, md: "grow" }}>
+            <Button component={Link} href="/services" color="inherit">
               Υπηρεσίες
-            </Link>
-            <Link href="/projects" className="font-medium p-2 text-gray-800">
+            </Button>
+            <Button component={Link} href="/projects" color="inherit">
               Έργα
-            </Link>
-            <Link href="/blog" className="font-medium p-2 text-gray-800">
+            </Button>
+            <Button component={Link} href="/blog" color="inherit">
               blog
-            </Link>
-          </div>
-          <div className="flex gap-2 w-full sm:w-auto justify-center">
-            <a
+            </Button>
+          </Grid>
+          <Grid size={{ xs: 12, md: "auto" }}>
+            <IconButton
               href="https://www.facebook.com/people/%CE%9A%CE%B1%CF%84%CE%B1%CF%83%CE%BA%CE%B5%CF%85%CE%AD%CF%82-%CE%95%CF%80%CE%B9%CF%83%CE%BA%CE%B5%CF%85%CE%B5%CF%85%CE%B5%CF%82-pjetri/100063702662482/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
+              color="inherit"
             >
-              <FacebookIcon width={24} height={24} />
-            </a>
-            <a
+              <FacebookIcon />
+            </IconButton>
+            <IconButton
               href="https://www.instagram.com/saimir_pjetri/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="instagram"
+              color="inherit"
             >
-              <InstagramIcon width={24} height={24} />
-            </a>
-          </div>
-        </div>
-        <hr className="mt-4 mb-6 border-gray-300" />
-        <div className="flex flex-wrap gap-3 justify-center items-center text-gray-600 text-sm">
-          <Link href="/privacy-policy">Πολιτική Απορρήτου</Link>
-          <Link href="/terms-and-conditions">Όροι Χρήσης</Link>
-          <p className="ml-0 sm:ml-auto w-full sm:w-auto">
-            Copyright © {date} pjerti
-          </p>
-        </div>
-      </div>
-    </footer>
+              <InstagramIcon />
+            </IconButton>
+          </Grid>
+        </Grid>
+        <Divider sx={{ my: 1 }} />
+        <Grid
+          container
+          alignItems="center"
+          textAlign={{ xs: "center", md: "initial" }}
+        >
+          <Grid size={{ xs: 12, md: "grow" }}>
+            <Button
+              component={Link}
+              href="/privacy-policy"
+              color="inherit"
+              size="small"
+            >
+              Πολιτική Απορρήτου
+            </Button>
+            <Button
+              component={Link}
+              href="/terms-and-conditions"
+              color="inherit"
+              size="small"
+            >
+              Όροι Χρήσης
+            </Button>
+          </Grid>
+          <Grid size={{ xs: 12, md: "auto" }}>
+            <Typography variant="body2">Copyright © {date} pjerti</Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 

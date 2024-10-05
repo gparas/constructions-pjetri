@@ -1,30 +1,22 @@
-"use client";
-
-import { sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import LogoIcon from "./icon";
 
 const Logo = () => {
   return (
-    <Link
+    <Button
       href="/"
-      className="inline-flex items-center gap-2"
-      onClick={() =>
-        sendGAEvent({
-          action: "click_button",
-          category: "interaction",
-          label: "logo",
-        })
-      }
+      component={Link}
+      color="inherit"
+      size="large"
+      startIcon={<LogoIcon color="primary" sx={{ width: 48, height: 48 }} />}
+      sx={{ padding: 0 }}
     >
-      <svg viewBox="0 0 64 64" width={48} height={48}>
-        <path
-          className="fill-primary"
-          d="M 41.629 11.523 L 47.253 17.165 L 47.253 14.334 L 50.627 14.334 L 50.627 20.55 L 58.444 28.393 L 52.314 28.393 L 41.629 17.709 L 30.944 28.393 L 24.758 28.393 L 41.629 11.523 Z M 37.111 33.344 L 41.022 33.344 L 41.022 37.256 L 37.111 37.256 L 37.111 33.344 Z M 42.244 33.344 L 46.156 33.344 L 46.156 37.256 L 42.244 37.256 L 42.244 33.344 Z M 37.111 28.393 L 41.022 28.393 L 41.022 32.304 L 37.111 32.304 L 37.111 28.393 Z M 42.244 28.393 L 46.156 28.393 L 46.156 32.304 L 42.244 32.304 L 42.244 28.393 Z"
-        />
-        <path d="M 13.511 22.77 L 13.511 22.77 C 13.482 22.473 13.134 20.19 9.403 20.863 C 6.55 21.376 3.5 25.219 3.5 25.219 C 3.5 25.219 3.871 19.254 9.98 16.136 C 13.511 14.334 19.218 14.534 19.218 14.534 C 19.218 14.534 20.195 17.076 22.204 17.06 C 24.408 17.043 25.573 14.9 25.573 14.9 C 25.573 14.9 27.014 14.832 27.377 14.948 C 27.688 15.047 28.834 15.703 28.834 18.302 C 28.834 20.074 28.476 21.087 28.261 21.176 C 28.054 21.261 27.884 21.197 27.567 21.409 C 27.251 21.621 27.286 21.872 27.064 21.978 C 26.857 22.077 24.926 21.978 24.926 21.978 C 24.926 21.986 23.471 19.894 21.271 20.439 C 19.716 20.825 19.138 22.801 19.138 22.801 L 19.135 22.801 L 19.135 46.854 L 52.876 46.854 L 52.876 31.205 L 58.5 31.205 L 58.5 52.477 L 13.511 52.477 L 13.511 22.77 Z" />
-      </svg>
-      <span className="font-bold text-lg text-gray-800">Pjerti</span>
-    </Link>
+      <Typography component="span" fontWeight="bold">
+        Pjerti
+      </Typography>
+    </Button>
   );
 };
 

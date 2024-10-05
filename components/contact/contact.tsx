@@ -1,3 +1,9 @@
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid2";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
+
 import EmailIcon from "@/icons/email";
 import LocationIcon from "@/icons/location";
 import PhoneIcon from "@/icons/phone";
@@ -27,34 +33,38 @@ const CONTACT_INFO = [
 ];
 const Contact = () => {
   return (
-    <section className="py-12 text-center">
-      <div className="container">
-        <header className="mb-12">
-          <h2 className="mb-2">Επικοινωνήστε Μαζί Μας</h2>
-          <p className="text-lg md:text-xl">
+    <Box component="section" py={6} textAlign="center">
+      <Container>
+        <Box component="header" mb={[3, 6]}>
+          <Typography variant="h2">Επικοινωνήστε Μαζί Μας</Typography>
+          <Typography component="p" variant="subtitle1">
             Είμαστε εδώ για να απαντήσουμε σε κάθε σας ερώτηση.
-          </p>
-        </header>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
+          </Typography>
+        </Box>
+        <Grid container spacing={4}>
           {CONTACT_INFO.map((item, index) => {
             const Icon = item.icon;
             return (
-              <div key={index}>
-                <Icon width={40} height={40} className="fill-primary mx-auto" />
-                <h3 className="mb-1 mt-6 text-lg">{item.title}</h3>
-                <a
+              <Grid key={index} size={{ xs: 12, md: 4 }}>
+                <Icon color="primary" sx={{ fontSize: 40, mb: 2 }} />
+                <Typography variant="h5" component="h3" mb={1}>
+                  {item.title}
+                </Typography>
+                <Link
                   href={item.href}
                   target={item.target}
+                  color="text.primary"
+                  underline="hover"
                   rel="noopener noreferrer"
                 >
                   {item.description}
-                </a>
-              </div>
+                </Link>
+              </Grid>
             );
           })}
-        </div>
-      </div>
-    </section>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 

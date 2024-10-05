@@ -1,10 +1,14 @@
 "use client";
 
+import { colors, Typography } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
+    primary: {
+      main: colors.teal[700],
+    },
   },
   breakpoints: {
     values: {
@@ -14,6 +18,9 @@ const theme = createTheme({
       lg: 992,
       xl: 1200,
     },
+  },
+  shape: {
+    borderRadius: 6,
   },
   typography: {
     fontFamily:
@@ -43,9 +50,14 @@ const theme = createTheme({
       fontWeight: 700,
     },
     subtitle1: {
-      fontSize: "1.125rem",
+      fontSize: "1.25rem",
       lineHeight: 1.5,
       fontWeight: 400,
+    },
+    button: {
+      fontSize: "1rem",
+      fontWeight: 600,
+      textTransform: "none",
     },
   },
   components: {
@@ -67,6 +79,19 @@ const theme = createTheme({
             maxWidth: 1140,
           },
         }),
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        sizeLarge: ({ theme }) => ({
+          fontSize: theme.typography.pxToRem(18),
+        }),
+        sizeSmall: ({ theme }) => ({
+          fontSize: theme.typography.pxToRem(14),
+        }),
+        containedSizeLarge: {
+          padding: ".75rem 1.5rem",
+        },
       },
     },
   },
