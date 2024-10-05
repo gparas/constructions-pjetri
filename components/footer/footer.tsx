@@ -66,6 +66,7 @@ const Footer = () => {
               href="/privacy-policy"
               color="inherit"
               size="small"
+              sx={{ fontWeight: 400 }}
             >
               Πολιτική Απορρήτου
             </Button>
@@ -74,6 +75,7 @@ const Footer = () => {
               href="/terms-and-conditions"
               color="inherit"
               size="small"
+              sx={{ fontWeight: 400 }}
             >
               Όροι Χρήσης
             </Button>

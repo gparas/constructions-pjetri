@@ -36,7 +36,9 @@ const Contact = () => {
     <Box component="section" py={6} textAlign="center">
       <Container>
         <Box component="header" mb={[3, 6]}>
-          <Typography variant="h2">Επικοινωνήστε Μαζί Μας</Typography>
+          <Typography variant="h3" component="h1">
+            Επικοινωνία
+          </Typography>
           <Typography component="p" variant="subtitle1">
             Είμαστε εδώ για να απαντήσουμε σε κάθε σας ερώτηση.
           </Typography>
@@ -47,7 +49,7 @@ const Contact = () => {
             return (
               <Grid key={index} size={{ xs: 12, md: 4 }}>
                 <Icon color="primary" sx={{ fontSize: 40, mb: 2 }} />
-                <Typography variant="h5" component="h3" mb={1}>
+                <Typography variant="h5" component="h2" mb={1}>
                   {item.title}
                 </Typography>
                 <Link

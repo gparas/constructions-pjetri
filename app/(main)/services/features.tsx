@@ -1,3 +1,8 @@
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid2";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+
 import ConstructionIcon from "@/icons/construction";
 import InsulationIcon from "@/icons/insulation";
 import RenovationIcon from "@/icons/renovation";
@@ -28,7 +33,7 @@ const FEATURES = [
     icon: InsulationIcon,
   },
   {
-    title: "Κεραμοσkεπές",
+    title: "Κεραμοσκεπές",
     description:
       "Προσφέρουμε εγκατάσταση και επισκευή κεραμοσκεπών, χρησιμοποιώντας υλικά υψηλής ποιότητας",
     icon: RoofIcon,
@@ -67,33 +72,38 @@ const FEATURES = [
 
 const Features = () => {
   return (
-    <section className="py-12">
-      <div className="container">
-        <header className="mb-12 md:mb-20 text-center lg:w-2/3 xl:w-1/2 mx-auto">
-          <h2 className="mb-3">Υψηλής Ποιότητας Υπηρεσίες</h2>
-          <p className="text-lg md:text-xl">
+    <Box component="section" py={6} textAlign="center">
+      <Container>
+        <Box component="header" mb={[4, 8]}>
+          <Typography variant="h2" component="h1" mb={2}>
+            Υψηλής Ποιότητας Υπηρεσίες
+          </Typography>
+          <Typography
+            component="p"
+            variant="subtitle1"
+            maxWidth={768}
+            mx="auto"
+          >
             Από το 2005, ειδικευόμαστε στην κατασκευή και ανακαίνιση κατοικιών,
             πολυκατοικιών και επαγγελματικών χώρων.
-          </p>
-        </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5 text-center md:text-left">
+          </Typography>
+        </Box>
+        <Grid container spacing={4}>
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon;
             return (
-              <div key={index}>
-                <Icon
-                  width={48}
-                  height={48}
-                  className="fill-primary mx-auto md:mx-0"
-                />
-                <h3 className="mb-4 mt-6 text-xl">{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
+              <Grid key={index} size={{ xs: 12, sm: 6, lg: 4 }} mb={2}>
+                <Icon color="primary" sx={{ fontSize: 48 }} />
+                <Typography variant="h5" component="h2" mb={1}>
+                  {feature.title}
+                </Typography>
+                <Typography>{feature.description}</Typography>
+              </Grid>
             );
           })}
-        </div>
-      </div>
-    </section>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
