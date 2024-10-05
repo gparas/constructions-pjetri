@@ -76,16 +76,12 @@ const Features = () => {
             πολυκατοικιών και επαγγελματικών χώρων.
           </p>
         </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5 text-center md:text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5 text-center">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon;
             return (
               <div key={index}>
-                <Icon
-                  width={48}
-                  height={48}
-                  className="fill-primary mx-auto md:mx-0"
-                />
+                <Icon width={48} height={48} className="fill-primary mx-auto" />
                 <h3 className="mb-4 mt-6 text-xl">{feature.title}</h3>
                 <p>{feature.description}</p>
               </div>

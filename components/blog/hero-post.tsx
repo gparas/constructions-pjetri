@@ -10,7 +10,14 @@ const HeroPost = ({ post }: { post: Post }) => {
     <section className="py-12">
       <div className="container">
         <div className="mb-8 md:mb-16">
-          <CoverImage slug={slug} title={title} src={coverImage} priority />
+          <CoverImage
+            slug={slug}
+            title={title}
+            alt={title}
+            src={coverImage}
+            priority
+            sizes="100vw"
+          />
         </div>
         <div className="grid md:grid-cols-2 gap-4 lg:gap-x-8">
           <div>

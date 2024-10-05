@@ -2,7 +2,7 @@ import LearnMoreButton from "../learn-more";
 
 const Banner = () => {
   return (
-    <section className="py-8">
+    <section>
       <div className="container">
         <div className="bg-gray-100 rounded-md p-8">
           <div className="flex flex-col items-center gap-1 text-center">

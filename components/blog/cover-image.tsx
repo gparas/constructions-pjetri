@@ -1,25 +1,21 @@
 import cn from "classnames";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
 
-type Props = {
+interface Props extends ImageProps {
   title: string;
-  src: string;
-  priority?: boolean;
   slug?: string;
-};
+}
 
-const CoverImage = ({ title, src, slug, priority }: Props) => {
+const CoverImage = ({ title, slug, ...other }: Props) => {
   const image = (
     <Image
-      src={src}
-      priority={priority}
-      alt={`Cover Image for ${title}`}
       className={cn("w-full rounded-lg", {
         "hover:opacity-75 transition-opacity duration-200": slug,
       })}
-      width={1200}
-      height={630}
+      width={1092}
+      height={573}
+      {...other}
     />
   );
   return slug ? (

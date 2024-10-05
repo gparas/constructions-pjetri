@@ -21,7 +21,7 @@ const Faq = () => {
                 className="flex items-center justify-between gap-3 py-4"
                 onClick={() => toggle(index)}
               >
-                <p className="text-lg heading">{faq.title}</p>
+                <p className="text-lg font-semibold">{faq.title}</p>
                 <ChevronDownIcon
                   width={24}
                   height={24}

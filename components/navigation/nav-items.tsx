@@ -12,7 +12,7 @@ const NavItems = ({ onClick }: Props) => {
     <Link
       key={item.href}
       href={item.href}
-      className="p-2 heading"
+      className="p-2 font-semibold"
       onClick={onClick}
     >
       {item.label}

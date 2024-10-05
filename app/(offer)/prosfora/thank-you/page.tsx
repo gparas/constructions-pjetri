@@ -30,7 +30,7 @@ const ThankYouPage = () => {
         </p>
       </div>
       <div className="text-center">
-        <p className="heading">
+        <p className="font-semibold">
           Για οποιαδήποτε ερώτηση επικοινωνήσετε μαζί μας
         </p>
         <p>
