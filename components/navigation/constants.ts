@@ -1,4 +1,4 @@
-export const NAVIGATION_ITEMS = [
+export const NAV_ITEMS = [
   {
     href: "/",
     label: "Αρχική",
@@ -16,3 +16,5 @@ export const NAVIGATION_ITEMS = [
     label: "blog",
   },
 ];
+
+export const DRAWER_WIDTH = 240;

@@ -1,36 +1,108 @@
 "use client";
 
 import React, { useState } from "react";
-import Logo from "../logo";
-import NavItems from "./nav-items";
-import Offcanvas from "./offcanvas";
+import Link from "next/link";
+import AppBar from "@mui/material/AppBar";
+import Container from "@mui/material/Container";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Drawer from "@mui/material/Drawer";
+
 import MenuIcon from "@/icons/menu";
 
-const Navigation = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+import Logo from "../logo";
+import { DRAWER_WIDTH, NAV_ITEMS } from "./constants";
+
+interface Props {
+  window?: () => Window;
+}
+
+const Navigation = (props: Props) => {
+  const { window } = props;
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setDrawerOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <List onClick={handleDrawerToggle}>
+      <ListItem>
+        <Logo />
+      </ListItem>
+      {NAV_ITEMS.map((item, index) => (
+        <ListItem key={index} disablePadding>
+          <ListItemButton component={Link} href={item.href}>
+            <ListItemText
+              primary={item.label}
+              primaryTypographyProps={{ fontWeight: "fontWeightMedium" }}
+            />
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
+  );
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
   return (
-    <nav className="bg-white py-1">
-      <div className="container">
-        <div className="flex sm:hidden items-center justify-center relative">
-          <button
-            className="absolute inset-y-0 left-0 flex items-center w-12 h-12 justify-center -ml-3"
-            aria-label="menu"
-            onClick={toggleMenu}
-          >
-            <MenuIcon width={24} height={24} />
-          </button>
-          <Logo />
-        </div>
-        <div className="hidden sm:flex items-center">
-          <div className="flex-1">
+    <>
+      <AppBar elevation={0} color="inherit" position="static">
+        <Container>
+          <Toolbar disableGutters>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
             <Logo />
-          </div>
-          <NavItems />
-        </div>
-      </div>
-      <Offcanvas isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-    </nav>
+            <Box sx={{ display: { xs: "none", sm: "block" }, ml: "auto" }}>
+              {NAV_ITEMS.map((item, index) => (
+                <Button
+                  key={index}
+                  component={Link}
+                  href={item.href}
+                  color="inherit"
+                >
+                  {item.label}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <nav>
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={drawerOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { xs: "block", sm: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: DRAWER_WIDTH,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </nav>
+    </>
   );
 };
 

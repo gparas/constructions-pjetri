@@ -1,6 +1,6 @@
 "use client";
 
-import { colors, Typography } from "@mui/material";
+import { colors } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
