@@ -17,7 +17,6 @@ const PostPreview = ({ title, coverImage, slug, date }: Props) => {
           slug={slug}
           title={title}
           src={coverImage}
-          alt={title}
           sizes="(min-width: 768px) 50vw, 100vw"
         />
       </div>
