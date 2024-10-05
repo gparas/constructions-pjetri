@@ -8,11 +8,11 @@ import ShowcaseGrid from "@/components/showcase-grid";
 
 const Bathroom = () => {
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <header className="mb-12 md:mb-20 text-center lg:w-2/3 xl:w-1/2 mx-auto">
           <h2 className="mb-2">Ανακαίνιση Μπάνιου</h2>
-          <p className="subtitle">
+          <p className="text-lg md:text-xl">
             Ολοκληρωμένες λύσεις για την ανανέωση και βελτίωση του μπάνιου σας
           </p>
         </header>

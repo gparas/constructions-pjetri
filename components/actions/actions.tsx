@@ -27,7 +27,7 @@ const Actions = ({ disableNext, lastStep }: Props) => {
       <div className="flex justify-between">
         <button
           onClick={handlePrev}
-          className="btn-link gap-4"
+          className="text-lg font-medium p-2 inline-flex items-center justify-center gap-4"
           disabled={activeStep === 0}
           type={lastStep ? "submit" : "button"}
           style={{ visibility: activeStep === 0 ? "hidden" : "visible" }}

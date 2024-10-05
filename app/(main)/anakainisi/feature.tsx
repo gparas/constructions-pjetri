@@ -21,7 +21,7 @@ const FEATURES = [
 
 const Feature = () => {
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <div className="flex flex-col items-center mb-12 text-center gap-2">
           <RenovationIcon

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const TermsAndConditionsPage = () => {
   return (
-    <section>
+    <section className="py-12">
       <div className="container lg:max-w-3xl">
         <h1 className="mb-6 display-6">Όροι Χρήσης</h1>
         <p className="mb-8">

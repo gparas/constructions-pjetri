@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const OfferButton = ({ ...other }) => {
   return (
-    <Link href="/prosfora/" className="btn btn-action-1" {...other}>
+    <Link href="/prosfora/" className="btn" {...other}>
       Ζητήστε Προσφορά
     </Link>
   );

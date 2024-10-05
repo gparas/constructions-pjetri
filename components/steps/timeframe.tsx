@@ -21,7 +21,7 @@ const Timeframe = () => {
           return (
             <div key={option}>
               <input
-                className="hidden peer"
+                className="hidden"
                 type="radio"
                 name="options"
                 id={`option-${index}`}
@@ -31,10 +31,10 @@ const Timeframe = () => {
                 required
               />
               <label
-                className="custom-check-label items-start p-4"
+                className="custom-check-label p-4"
                 htmlFor={`option-${index}`}
               >
-                <span className="text-gray-600">{option}</span>
+                <span>{option}</span>
               </label>
             </div>
           );

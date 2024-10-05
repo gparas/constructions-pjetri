@@ -7,7 +7,7 @@ import CoverImage from "./cover-image";
 const HeroPost = async ({ post }: { post: Post }) => {
   const { title, coverImage, date, excerpt, slug } = post;
   return (
-    <section>
+    <section className="py-12">
       <div className="container">
         <div className="mb-8 md:mb-16">
           <CoverImage
