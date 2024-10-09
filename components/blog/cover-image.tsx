@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Link from "next/link";
-import Image, { ImageProps } from "next/image";
+import Image from "next/image";
 
 interface Props {
   title: string;

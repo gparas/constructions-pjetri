@@ -13,7 +13,6 @@ const HeroPost = ({ post }: { post: Post }) => {
           <CoverImage
             slug={slug}
             title={title}
-            alt={title}
             src={coverImage}
             priority
             sizes="100vw"

@@ -6,7 +6,7 @@ import PaintIcon from "@/icons/paint";
 import DemolitionIcon from "@/icons/demolition";
 import ScrewdriverIcon from "@/icons/screwdriver";
 import WindowIcon from "@/icons/window";
-import MaintenanceIcon from "@/icons/maintenance";
+import ToolIcon from "@/icons/tool";
 
 const FEATURES = [
   {
@@ -61,7 +61,7 @@ const FEATURES = [
     title: "Συντηρήσεις",
     description:
       "Προσφέρουμε πλήρες φάσμα υπηρεσιών συντήρησης για να διατηρείται ο χώρος σας σε τέλεια κατάσταση, προλαμβάνοντας μελλοντικά προβλήματα.",
-    icon: MaintenanceIcon,
+    icon: ToolIcon,
   },
 ];
 
@@ -81,7 +81,7 @@ const Features = () => {
             const Icon = feature.icon;
             return (
               <div key={index}>
-                <Icon width={48} height={48} className="fill-primary mx-auto" />
+                <Icon width={72} height={72} className="fill-primary mx-auto" />
                 <h3 className="mb-4 mt-6 text-xl">{feature.title}</h3>
                 <p>{feature.description}</p>
               </div>
