@@ -1,8 +1,16 @@
 import { SVGProps } from "react";
 
 const EmailIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M12 11.649 20.413 4H3.587Zm0 2.702L2 5.26V19c-.044.348.057.471.293.707s.359.337.707.293h18c.348.044.471-.057.707-.293s.337-.359.293-.707V5.26ZM3 2h18c.757.044 1.634.391 2.121.879.488.487.835 1.364.879 2.121v14c-.044.757-.391 1.634-.879 2.121-.487.488-1.364.835-2.121.879H3c-.757-.044-1.634-.391-2.121-.879C.391 20.634.044 19.757 0 19V5c.044-.757.391-1.634.879-2.121C1.366 2.391 2.243 2.044 3 2Z" />
+  <svg viewBox="0 0 48 48" {...props}>
+    <path
+      d="M 18.839 30.499 L 38.194 44 L 44 4 L 4 25.935 L 14.323 28.807 M 22.71 22.065 L 14.323 28.807 L 18.839 44 M 18.839 44 L 23.013 37.431 M 18.839 44 L 18.839 30.499 L 44 4"
+      fill="none"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeMiterlimit={10}
+      strokeWidth={1.75}
+    />
   </svg>
 );
 export default EmailIcon;

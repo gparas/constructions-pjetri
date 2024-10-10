@@ -40,7 +40,7 @@ const Contact = () => {
             const Icon = item.icon;
             return (
               <div key={index}>
-                <Icon width={40} height={40} className="fill-primary mx-auto" />
+                <Icon width={56} height={56} className="mx-auto text-primary" />
                 <h3 className="mb-1 mt-6 text-lg">{item.title}</h3>
                 <a
                   href={item.href}

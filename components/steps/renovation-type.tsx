@@ -3,8 +3,8 @@
 import { ChangeEvent } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { actions, selectors } from "@/store/stepper";
-import PlanIcon from "@/icons/renovation";
-import HouseWorkIcon from "@/icons/house-work";
+import SquareMeterIcon from "@/icons/square-meter";
+import CompleteRenovationIcon from "@/icons/complete-renovation";
 
 import Actions from "../actions";
 
@@ -20,7 +20,7 @@ const RenovationType = () => {
     <>
       <div className="grid grid-cols-2 gap-4 flex-grow sm:flex-grow-0">
         {OPTIONS.map((option, index) => {
-          const Icon = index === 0 ? HouseWorkIcon : PlanIcon;
+          const Icon = index === 0 ? CompleteRenovationIcon : SquareMeterIcon;
           return (
             <div key={option}>
               <input

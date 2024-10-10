@@ -7,9 +7,9 @@ const Cta = () => {
       <div className="container">
         <div className="bg-gray-100 rounded-md p-8">
           <div className="flex flex-col items-center gap-1 text-center">
-            <h2>Ετοιμοι να Ξεκινήσουμε</h2>
+            <h2>Τελική Τιμή: 4.000€</h2>
             <p className="text-lg md:text-xl mb-4">
-              Λάβετε προσφορά για την ανακαίνιση του χώρου σας μέσα σε 24 ώρες.
+              Κάντε το πρώτο βήμα προς το μπάνιο των ονείρων σας!
             </p>
             <OfferButton />
           </div>

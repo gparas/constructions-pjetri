@@ -12,6 +12,10 @@
   @apply border-gray-300;
 }
 
+.custom-check-label {
+  min-height: 132px;
+}
+
 .form-select:focus,
 .form-control:focus,
 .form-check-input:focus {

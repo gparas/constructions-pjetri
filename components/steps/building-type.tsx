@@ -34,7 +34,7 @@ const BuildingType = () => {
                 required
               />
               <label className="custom-check-label" htmlFor={`option-${index}`}>
-                <Icon width={64} height={64} />
+                <Icon width={56} height={56} />
                 <span>{option}</span>
               </label>
             </div>

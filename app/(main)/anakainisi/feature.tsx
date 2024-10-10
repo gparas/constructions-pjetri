@@ -27,7 +27,7 @@ const Feature = () => {
           <RenovationIcon
             width={72}
             height={72}
-            className="fill-primary mx-auto"
+            className="mx-auto text-primary"
           />
           <p className="text-gray-500">Ανακαινίστε και Κερδίστε</p>
           <h2>Τα Πλεονεκτήματα μιας Ανακαίνισης</h2>
