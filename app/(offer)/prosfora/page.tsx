@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Progress from "@/components/progress";
 import Steps from "@/components/steps";
 
 export const metadata: Metadata = {
@@ -11,13 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-const OfferPage = () => {
-  return (
-    <>
-      <Progress />
-      <Steps />
-    </>
-  );
-};
+const OfferPage = () => <Steps />;
 
 export default OfferPage;

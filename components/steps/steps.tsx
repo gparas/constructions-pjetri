@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import { useDispatch, useSelector } from "react-redux";
 import { actions, selectors } from "@/store/stepper";
 import Loader from "../loader";
+import Progress from "../progress";
 
 const RenovationType = dynamic(() => import("./renovation-type"), {
   loading: () => <Loader />,
@@ -21,9 +22,6 @@ const WorkType = dynamic(() => import("./work-type"), {
 const Timeframe = dynamic(() => import("./timeframe"), {
   loading: () => <Loader />,
 });
-const Budget = dynamic(() => import("./budget"), {
-  loading: () => <Loader />,
-});
 const Contact = dynamic(() => import("./contact"), {
   loading: () => <Loader />,
 });
@@ -34,7 +32,6 @@ const steps = [
   ConstructionYear,
   WorkType,
   Timeframe,
-  Budget,
   Contact,
 ];
 const titles = [
@@ -42,7 +39,6 @@ const titles = [
   "Τύπος Κτιρίου",
   "Έτος Κατασκευής",
   "Επιλογή Εργασιών",
-  "Χρονοδιάγραμμα",
   "Προϋπολογισμός",
 ];
 const subtitles = [
@@ -51,7 +47,6 @@ const subtitles = [
   "Παρακαλούμε εισαγάγετε το έτος κατασκευής του κτιρίου.",
   "Δηλώστε τα είδη των εργασιών που απαιτούνται για την ανακαίνισή σας",
   "Ενημερώστε μας για το πότε θέλετε να ξεκινήσει η ανακαίνιση",
-  "Ορίστε ένα εύρος προϋπολογισμού για την ανακαίνιση",
   "Συμπληρώστε τα στοιχεία σας για να σας στείλουμε την προσφορά",
 ];
 
@@ -67,13 +62,16 @@ const Steps = () => {
   const title = titles[activeStep];
   const subtitle = subtitles[activeStep];
   return (
-    <div className="flex flex-col flex-grow  gap-10">
-      <header className="text-center">
-        {title && <h1 className="mb-2">{title}</h1>}
-        <p className="text-lg md:text-xl">{subtitle}</p>
-      </header>
-      <Step />
-    </div>
+    <>
+      <Progress value={(activeStep / (steps.length - 1)) * 100} />
+      <div className="flex flex-col flex-grow  gap-10">
+        <header className="text-center">
+          {title && <h1 className="mb-2">{title}</h1>}
+          <p className="text-lg md:text-xl">{subtitle}</p>
+        </header>
+        <Step />
+      </div>
+    </>
   );
 };
 

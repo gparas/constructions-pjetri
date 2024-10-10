@@ -33,7 +33,11 @@ const BuildingType = () => {
                 defaultChecked={buildingType === option}
                 required
               />
-              <label className="custom-check-label" htmlFor={`option-${index}`}>
+              <label
+                className="custom-check-label"
+                htmlFor={`option-${index}`}
+                style={{ minHeight: 132 }}
+              >
                 <Icon width={56} height={56} />
                 <span>{option}</span>
               </label>

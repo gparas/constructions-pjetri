@@ -18,10 +18,12 @@ const Faq = () => {
           return (
             <div key={index} className={`py-4 ${index !== 0 && "border-t"}`}>
               <div
-                className="flex items-center justify-between gap-3 py-4"
+                className="flex items-center justify-between gap-3 py-4 cursor-pointer"
                 onClick={() => toggle(index)}
               >
-                <p className="text-lg font-semibold">{faq.title}</p>
+                <p className="text-lg font-semibold text-gray-800">
+                  {faq.title}
+                </p>
                 <ChevronDownIcon
                   width={24}
                   height={24}
