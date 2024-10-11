@@ -44,7 +44,7 @@ const Feature = () => {
                   height={72}
                   className="mx-auto mb-4 text-primary"
                 />
-                <h3 className="mb-2 text-lg">{feature.title}</h3>
+                <h2 className="mb-2 text-lg">{feature.title}</h2>
                 <p>{feature.description}</p>
               </div>
             );

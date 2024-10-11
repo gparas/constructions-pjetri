@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/anakainisi/mpaniou/`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/services/`,
       lastModified: new Date(),
       changeFrequency: "yearly",
@@ -32,30 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/prosfora/`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/prosfora/thank-you/`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/privacy-policy/`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.1,
-    },
-    {
-      url: `${baseUrl}/terms-and-conditions/`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.1,
     },
   ];
 }

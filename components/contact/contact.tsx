@@ -35,13 +35,13 @@ const Contact = () => {
             Είμαστε εδώ για να απαντήσουμε σε κάθε σας ερώτηση.
           </p>
         </header>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-4 gap-y-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-8">
           {CONTACT_INFO.map((item, index) => {
             const Icon = item.icon;
             return (
               <div key={index}>
                 <Icon width={56} height={56} className="mx-auto text-primary" />
-                <h3 className="mb-1 mt-6 text-lg">{item.title}</h3>
+                <h3 className="mb-1 mt-6 text-lg truncate">{item.title}</h3>
                 <a
                   href={item.href}
                   target={item.target}

@@ -40,7 +40,7 @@ const Features = () => {
             την ομορφιά του χώρου σας με προσοχή στις λεπτομέρειες.
           </p>
         </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-5">
           {FEATURES.map((feature, index) => {
             const Icon = feature.icon;
             return (
