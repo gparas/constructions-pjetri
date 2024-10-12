@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 import "./globals.css";
 import CookieBanner from "@/components/cookie-banner";
@@ -22,7 +22,7 @@ export default function RootLayout({
         {children}
         <CookieBanner />
       </body>
-      <GoogleAnalytics gaId="G-5LJBVVC7W3" />
+      <GoogleTagManager gtmId="GTM-T25RTGNF" />
     </html>
   );
 }
