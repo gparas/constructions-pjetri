@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug } from "@/lib/api";
+import Link from "next/link";
 import ReactMarkdown from "markdown-to-jsx";
 import PostHeader from "@/components/blog/post-header";
 import PostBanner from "@/components/blog/post-banner";
@@ -69,12 +70,16 @@ export default async function Post({ params }: Params) {
                 component: "ul",
                 props: { className: "text-lg mb-6" },
               },
+              a: {
+                component: Link,
+                props: { className: "text-primary" },
+              },
             },
           }}
         >
           {post.content}
         </ReactMarkdown>
-        <PostBanner />
+        <PostBanner tags={post.tags} />
       </div>
     </article>
   );

@@ -1,21 +1,8 @@
-"use client";
-
-import { sendGAEvent } from "@next/third-parties/google";
 import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link
-      href="/"
-      className="inline-flex items-center gap-2"
-      onClick={() =>
-        sendGAEvent({
-          action: "click_button",
-          category: "interaction",
-          label: "logo",
-        })
-      }
-    >
+    <Link href="/" className="inline-flex items-center gap-2">
       <svg viewBox="0 0 64 64" width={48} height={48}>
         <path
           className="fill-primary"
