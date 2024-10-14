@@ -8,6 +8,7 @@ import emailjs from "@emailjs/browser";
 
 import Actions from "../actions";
 import Loader from "../loader";
+import Header from "./header";
 
 const Contact = () => {
   const steps = useSelector(selectors.getSteps);
@@ -62,6 +63,7 @@ const Contact = () => {
       {loading && (
         <Loader className="absolute inset-x-0 inset-y-0 bg-white bg-opacity-75" />
       )}
+      <Header subtitle="Συμπληρώστε τα στοιχεία σας για να σας στείλουμε την προσφορά" />
       <form
         ref={form}
         onSubmit={handleSubmit}

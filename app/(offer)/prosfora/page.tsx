@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Steps from "@/components/steps";
+import Stepper from "./stepper";
 
 export const metadata: Metadata = {
   title: "Προσφορά",
@@ -10,6 +10,6 @@ export const metadata: Metadata = {
   },
 };
 
-const OfferPage = () => <Steps />;
+const OfferPage = () => <Stepper />;
 
 export default OfferPage;

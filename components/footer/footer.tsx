@@ -2,6 +2,7 @@ import Link from "next/link";
 import Logo from "../logo";
 import InstagramIcon from "@/icons/instagram";
 import FacebookIcon from "@/icons/facebook";
+import { NAVIGATION_ITEMS } from "@/lib/constants";
 
 const Footer = () => {
   const date = new Date().getFullYear();
@@ -13,15 +14,15 @@ const Footer = () => {
             <Logo />
           </div>
           <div className="w-full sm:flex-1 mb-3 sm:mb-0">
-            <Link href="/services" className="font-medium p-2 text-gray-800">
-              Υπηρεσίες
-            </Link>
-            <Link href="/projects" className="font-medium p-2 text-gray-800">
-              Έργα
-            </Link>
-            <Link href="/blog" className="font-medium p-2 text-gray-800">
-              blog
-            </Link>
+            {NAVIGATION_ITEMS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="font-medium p-2 text-gray-800"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
           <div className="flex gap-2 w-full sm:w-auto justify-center">
             <a

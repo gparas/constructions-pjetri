@@ -1,11 +1,11 @@
 export const NAVIGATION_ITEMS = [
   {
-    href: "/",
-    label: "Αρχική",
-  },
-  {
     href: "/services",
     label: "Υπηρεσίες",
+  },
+  {
+    href: "/anakainisi",
+    label: "Ανακαίνιση",
   },
   {
     href: "/projects",

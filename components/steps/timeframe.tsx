@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { actions, selectors } from "@/store/stepper";
 
 import Actions from "../actions";
+import Header from "./header";
 
 const Timeframe = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,10 @@ const Timeframe = () => {
   const OPTIONS = ["Άμεση έναρξη", "Εντός 1-3 μηνών", "Εντός 6 μηνών"];
   return (
     <>
+      <Header
+        title="Χρονικό Πλαίσιο"
+        subtitle="Πότε θα θέλατε να ξεκινήσει η ανακαίνιση;"
+      />
       <div className="flex flex-col gap-3 flex-grow sm:flex-grow-0 w-full sm:w-96 mx-auto">
         {OPTIONS.map((option, index) => {
           return (

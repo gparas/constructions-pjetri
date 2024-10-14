@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { actions, selectors } from "@/store/stepper";
 
 import Actions from "../actions";
+import Header from "./header";
+
 import { generateYearsArray } from "./utils";
 
 const ConstructionYear = () => {
@@ -18,6 +20,10 @@ const ConstructionYear = () => {
   const options = generateYearsArray();
   return (
     <>
+      <Header
+        title="Έτος Κατασκευής"
+        subtitle="Παρακαλούμε επιλέξτε το έτος κατασκευής του κτιρίου."
+      />
       <div className="flex-grow sm:flex-grow-0">
         <select
           className="form-select"

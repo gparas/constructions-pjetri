@@ -7,6 +7,7 @@ import HomeIcon from "@/icons/home";
 import ShopIcon from "@/icons/shop";
 
 import Actions from "../actions";
+import Header from "./header";
 
 const BuildingType = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,10 @@ const BuildingType = () => {
   const OPTIONS = ["Οικιακό", "Επαγγελματικό"];
   return (
     <>
+      <Header
+        title="Τύπος Κτιρίου"
+        subtitle="Η ανακαίνιση αφορά οικιακό ή επαγγελματικό χώρο"
+      />
       <div className="grid grid-cols-2 gap-4 flex-grow sm:flex-grow-0">
         {OPTIONS.map((option, index) => {
           const Icon = index === 0 ? HomeIcon : ShopIcon;

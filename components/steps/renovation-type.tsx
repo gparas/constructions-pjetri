@@ -7,6 +7,7 @@ import SquareMeterIcon from "@/icons/square-meter";
 import CompleteRenovationIcon from "@/icons/complete-renovation";
 
 import Actions from "../actions";
+import Header from "./header";
 
 const RenovationType = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,10 @@ const RenovationType = () => {
   const OPTIONS = ["Ολική ανακαίνιση", "Μερική ανακαίνιση"];
   return (
     <>
+      <Header
+        title="Είδος Ανακαίνισης"
+        subtitle="Επιλέξτε το είδος ανακαίνισης που σας ενδιαφέρει"
+      />
       <div className="grid grid-cols-2 gap-4 flex-grow sm:flex-grow-0">
         {OPTIONS.map((option, index) => {
           const Icon = index === 0 ? CompleteRenovationIcon : SquareMeterIcon;

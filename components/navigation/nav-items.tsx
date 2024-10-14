@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { NAVIGATION_ITEMS } from "./constants";
+import { NAVIGATION_ITEMS } from "@/lib/constants";
 
 interface Props {
   onClick?: () => void;
