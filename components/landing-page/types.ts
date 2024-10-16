@@ -12,8 +12,6 @@ interface Feature {
 }
 
 export interface FeaturesProps {
-  title?: string;
-  subtitle?: string;
   features: Feature[];
 }
 

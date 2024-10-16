@@ -21,7 +21,6 @@ const Carousel = ({ images }: CarouselProps) => {
               src={item.src}
               alt={item.alt}
               placeholder="blur"
-              className="rounded-md w-10/12 lg:w-5/12"
               style={{
                 scrollSnapAlign: "center",
               }}
