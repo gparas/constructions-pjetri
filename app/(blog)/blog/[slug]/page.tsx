@@ -13,9 +13,11 @@ export function generateMetadata({ params }: Params): Metadata {
   }
 
   const title = post.title;
+  const description = post.excerpt;
 
   return {
     title,
+    description,
     alternates: {
       canonical: "/blog/" + post.slug + "/",
     },
