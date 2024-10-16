@@ -1,19 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { FAQ } from "./constants";
 import ChevronDownIcon from "@/icons/chevron-down";
+import { FaqProps } from "./types";
 
-const Faq = () => {
+const Faq = ({ faqs }: FaqProps) => {
   const [expanded, setExpanded] = useState<number | null>(null);
   const toggle = (index: number) =>
     setExpanded(expanded === index ? null : index);
 
   return (
-    <section className="py-12">
+    <section className="my-12">
       <div className="container md:max-w-2xl">
         <h2 className="mb-6 lg:text-center">Συχνές Ερωτήσεις</h2>
-        {FAQ.map((faq, index) => {
+        {faqs.map((faq, index) => {
           const isExpanded = expanded === index;
           return (
             <div key={index} className={`py-4 ${index !== 0 && "border-t"}`}>

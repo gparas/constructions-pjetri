@@ -8,9 +8,9 @@ import ShowcaseGrid from "@/components/showcase-grid";
 
 const Insulation = () => {
   return (
-    <section className="py-12">
+    <section className="my-16">
       <div className="container">
-        <header className="mb-12 md:mb-20 text-center md:w-2/3 xl:w-1/2 mx-auto">
+        <header className="mb-8 text-center md:w-2/3 xl:w-1/2 mx-auto">
           <h2 className="mb-2">Μόνωση Ταρατσών</h2>
           <p className="text-lg md:text-xl">
             Εξασφαλίστε τη μέγιστη ενεργειακή απόδοση του κτιρίου σας με τις

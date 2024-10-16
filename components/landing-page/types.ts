@@ -1,0 +1,47 @@
+import { StaticImageData } from "next/image";
+
+export interface HeaderProps {
+  title: string;
+  subtitle: string;
+}
+
+interface Feature {
+  title: string;
+  description: string;
+  icon: React.FC<React.SVGProps<SVGSVGElement>> | string;
+}
+
+export interface FeaturesProps {
+  title?: string;
+  subtitle?: string;
+  features: Feature[];
+}
+
+interface Image {
+  src: StaticImageData;
+  alt: string;
+}
+
+export interface CarouselProps {
+  images: Image[];
+}
+
+interface Step {
+  title: string;
+  description: string;
+}
+
+export interface StepsProps {
+  title: string;
+  description: string;
+  steps: Step[];
+}
+
+interface FAQItem {
+  title: string;
+  content: string;
+}
+
+export interface FaqProps {
+  faqs: FAQItem[];
+}

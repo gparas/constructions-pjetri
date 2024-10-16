@@ -1,33 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import First from "@/assets/images/anakainisi/showcase-1.jpg";
-import Second from "@/assets/images/anakainisi/showcase-2.jpg";
-import Third from "@/assets/images/anakainisi/showcase-3.jpg";
-import Fourth from "@/assets/images/anakainisi/showcase-4.jpg";
+import { CarouselProps } from "./types";
 
-const ITEMS = [
-  {
-    src: First,
-    alt: "showcase-1",
-  },
-  {
-    src: Second,
-    alt: "showcase-2",
-  },
-  {
-    src: Third,
-    alt: "showcase-3",
-  },
-  {
-    src: Fourth,
-    alt: "showcase-4",
-  },
-];
-
-const Carousel = () => {
+const Carousel = ({ images }: CarouselProps) => {
   return (
-    <section className="py-8">
+    <section className="my-12">
       <div className="container">
         <div
           className="carousel  flex flex-nowrap gap-4"
@@ -36,7 +14,7 @@ const Carousel = () => {
             scrollSnapType: "x mandatory",
           }}
         >
-          {ITEMS.map((item, index) => (
+          {images.map((item, index) => (
             <Image
               key={index}
               priority={index === 0}

@@ -9,9 +9,9 @@ import ShowcaseGrid from "../showcase-grid";
 
 const Showcase = () => {
   return (
-    <section className="py-12">
+    <section className="my-12">
       <div className="container">
-        <header className="mb-12 md:mb-20 text-center">
+        <header className="mb-12 text-center">
           <h2 className="mb-2">Πρόσφατα Έργα Μας</h2>
           <p className="text-lg md:text-xl">
             Ποιότητα και καινοτομία σε κάθε μας έργο

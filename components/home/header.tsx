@@ -2,7 +2,7 @@ import Illustration from "./illustration";
 
 const Header = () => {
   return (
-    <header className="py-12">
+    <header className="my-12">
       <div className="container">
         <div className="flex flex-wrap items-center md:flex-row-reverse gap-y-6">
           <div className="w-full md:w-7/12">

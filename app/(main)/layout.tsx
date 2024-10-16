@@ -10,8 +10,10 @@ const MainLayout = ({
   return (
     <>
       <Navigation />
-      <main className="flex-grow">{children}</main>
-      <Contact />
+      <main className="flex-grow">
+        {children}
+        <Contact />
+      </main>
       <Footer />
     </>
   );

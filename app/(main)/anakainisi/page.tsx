@@ -1,10 +1,7 @@
 import { Metadata } from "next";
-import Header from "./header";
-import Feature from "./feature";
-import Steps from "./steps";
-import Cta from "./cta";
-import Faq from "./faq";
-import Carousel from "./carousel";
+import LandingPage from "@/components/landing-page";
+import Banner from "./banner";
+import { CONFIG } from "./constants";
 
 export const metadata: Metadata = {
   title: "Ανακαίνιση",
@@ -18,12 +15,8 @@ export const metadata: Metadata = {
 const AnakainisiPage = () => {
   return (
     <>
-      <Header />
-      <Carousel />
-      <Feature />
-      <Steps />
-      <Faq />
-      <Cta />
+      <LandingPage {...CONFIG} />
+      <Banner />
     </>
   );
 };

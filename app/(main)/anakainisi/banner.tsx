@@ -1,9 +1,8 @@
-import React from "react";
-import OfferButton from "./offer-button";
+import Link from "next/link";
 
-const Cta = () => {
+const Banner = () => {
   return (
-    <section className="pt-0 pb-8">
+    <section className="my-12">
       <div className="container">
         <div className="bg-gray-100 rounded-md p-8">
           <div className="flex flex-col items-center gap-1 text-center">
@@ -11,7 +10,9 @@ const Cta = () => {
             <p className="text-lg md:text-xl mb-4">
               Λάβετε προσφορά για την ανακαίνιση του χώρου σας μέσα σε 24 ώρες.
             </p>
-            <OfferButton />
+            <Link href="/prosfora/" className="btn">
+              Ζητήστε Προσφορά
+            </Link>
           </div>
         </div>
       </div>
@@ -19,4 +20,4 @@ const Cta = () => {
   );
 };
 
-export default Cta;
+export default Banner;
