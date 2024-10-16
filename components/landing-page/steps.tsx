@@ -1,6 +1,7 @@
+import Image from "next/image";
 import { StepsProps } from "./types";
 
-const Steps = ({ title, description, steps }: StepsProps) => {
+const Steps = ({ title, description, steps, image }: StepsProps) => {
   return (
     <section className="my-12 py-12 bg-gray-50">
       <div className="container">
@@ -8,6 +9,13 @@ const Steps = ({ title, description, steps }: StepsProps) => {
           <div className="lg:col-span-3">
             <h2 className="mb-3">{title}</h2>
             <p className="text-lg md:text-xl mb-4">{description}</p>
+            {image && (
+              <Image
+                src={image.src}
+                alt={image.alt}
+                className="rounded-lg shadow-xl hidden md:block mt-12"
+              />
+            )}
           </div>
           <div className="flex flex-col gap-8 lg:col-start-5 lg:col-span-3">
             {steps.map((step, index) => (

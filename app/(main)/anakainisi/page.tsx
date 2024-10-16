@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import LandingPage from "@/components/landing-page";
-import Banner from "./banner";
 import { CONFIG } from "./constants";
 
 export const metadata: Metadata = {
@@ -12,13 +11,6 @@ export const metadata: Metadata = {
   },
 };
 
-const AnakainisiPage = () => {
-  return (
-    <>
-      <LandingPage {...CONFIG} />
-      <Banner />
-    </>
-  );
-};
+const AnakainisiPage = () => <LandingPage {...CONFIG} />;
 
 export default AnakainisiPage;

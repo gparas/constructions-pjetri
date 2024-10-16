@@ -1,9 +1,6 @@
 import { Metadata } from "next";
-import Header from "./header";
-import Feature from "./feature";
-import Steps from "./steps";
-import Cta from "./cta";
-import Faq from "./faq";
+import LandingPage from "@/components/landing-page";
+import { CONFIG } from "./constants";
 
 export const metadata: Metadata = {
   title: "Ανακαίνιση Μπάνιου",
@@ -14,16 +11,6 @@ export const metadata: Metadata = {
   },
 };
 
-const AnakainisiPage = () => {
-  return (
-    <>
-      <Header />
-      <Feature />
-      <Steps />
-      <Faq />
-      <Cta />
-    </>
-  );
-};
+const AnakainisiMpaniouPage = () => <LandingPage {...CONFIG} />;
 
-export default AnakainisiPage;
+export default AnakainisiMpaniouPage;

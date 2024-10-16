@@ -1,11 +1,12 @@
 import dynamic from "next/dynamic";
 
 import {
-  CarouselProps,
-  FaqProps,
-  FeaturesProps,
   HeaderProps,
+  FeaturesProps,
+  CarouselProps,
   StepsProps,
+  FaqProps,
+  BannerProps,
 } from "./types";
 
 interface Props {
@@ -14,6 +15,7 @@ interface Props {
   carousel?: CarouselProps;
   steps?: StepsProps;
   faq?: FaqProps;
+  banner?: BannerProps;
 }
 
 const componentMap = {
@@ -22,14 +24,14 @@ const componentMap = {
   carousel: dynamic(() => import("./carousel")),
   steps: dynamic(() => import("./steps")),
   faq: dynamic(() => import("./faq")),
+  banner: dynamic(() => import("./banner")),
 };
 
-const LandingPage = (props: Props) => {
-  return Object.entries(props).map(([key, value]) => {
+const LandingPage = (props: Props) =>
+  Object.entries(props).map(([key, value]) => {
+    if (!key) return null;
     const Component = componentMap[key as keyof typeof componentMap];
-    if (!value) return null;
     return <Component key={key} {...value} />;
   });
-};
 
 export default LandingPage;

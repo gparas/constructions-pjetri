@@ -98,10 +98,18 @@ const faq = {
   ],
 };
 
+const banner = {
+  title: "Ετοιμοι να Ξεκινήσουμε",
+  description:
+    "Λάβετε προσφορά για την ανακαίνιση του χώρου σας μέσα σε 24 ώρες.",
+  href: "/prosfora/",
+};
+
 export const CONFIG = {
   header,
   features,
   carousel,
   steps,
   faq,
+  banner,
 };

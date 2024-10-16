@@ -34,6 +34,10 @@ interface Step {
 export interface StepsProps {
   title: string;
   description: string;
+  image?: {
+    src: StaticImageData;
+    alt: string;
+  };
   steps: Step[];
 }
 
@@ -44,4 +48,10 @@ interface FAQItem {
 
 export interface FaqProps {
   faqs: FAQItem[];
+}
+
+export interface BannerProps {
+  title: string;
+  description: string;
+  href: string;
 }
