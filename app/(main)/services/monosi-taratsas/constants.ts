@@ -143,8 +143,8 @@ const banner = {
 export const CONFIG = {
   header,
   features,
-  carousel,
   steps,
+  carousel,
   faq,
   banner,
 };
