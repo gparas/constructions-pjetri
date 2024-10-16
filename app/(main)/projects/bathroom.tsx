@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import ImgOne from "@/assets/images/projects/project-3-1.jpg";
 import ImgTwo from "@/assets/images/projects/project-3-2.jpg";
@@ -18,20 +19,34 @@ const Bathroom = () => {
         </header>
         <ShowcaseGrid
           items={[
-            <Image
+            <Link
               key={"bathroom-1"}
-              src={ImgOne}
-              alt="bathroom-3"
-              className="h-full"
-            />,
-            <Image key={"bathroom-2"} src={ImgTwo} alt="bathroom-3" />,
-            <Image key={"bathroom-3"} src={ImgThree} alt="bathroom-3" />,
-            <Image
+              href="/anakainisi/mpaniou/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgOne} alt="bathroom-3" className="h-full" />
+            </Link>,
+            <Link
+              key={"bathroom-2"}
+              href="/anakainisi/mpaniou/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgTwo} alt="bathroom-3" />
+            </Link>,
+            <Link
+              key={"bathroom-3"}
+              href="/anakainisi/mpaniou/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgThree} alt="bathroom-3" />
+            </Link>,
+            <Link
               key={"bathroom-4"}
-              src={ImgFour}
-              alt="bathroom-3"
-              className="h-full"
-            />,
+              href="/anakainisi/mpaniou/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgFour} alt="bathroom-3" className="h-full" />
+            </Link>,
           ]}
         />
       </div>

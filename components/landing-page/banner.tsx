@@ -10,7 +10,7 @@ const Banner = ({ title, description, href }: BannerProps) => {
             <h2>{title}</h2>
             <p className="text-lg md:text-xl mb-4">{description}</p>
             <Link href={href} className="btn">
-              Ζητήστε Προσφορά Τώρα
+              Ζητήστε Προσφορά
             </Link>
           </div>
         </div>

@@ -21,7 +21,7 @@ const Showcase = () => {
           items={[
             <Link
               key="showcase-1"
-              href="/projects"
+              href="/projects/"
               className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image
@@ -34,7 +34,7 @@ const Showcase = () => {
             </Link>,
             <Link
               key="showcase-2"
-              href="/projects"
+              href="/projects/"
               className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image
@@ -46,7 +46,7 @@ const Showcase = () => {
             </Link>,
             <Link
               key="showcase-3"
-              href="/projects"
+              href="/projects/"
               className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image
@@ -58,7 +58,7 @@ const Showcase = () => {
             </Link>,
             <Link
               key="showcase-4"
-              href="/projects"
+              href="/projects/"
               className="hover:opacity-75 transition-opacity duration-200"
             >
               <Image

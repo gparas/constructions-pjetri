@@ -5,6 +5,7 @@ import ImgThree from "@/assets/images/projects/project-4-3.jpg";
 import ImgFour from "@/assets/images/projects/project-4-4.jpg";
 
 import ShowcaseGrid from "@/components/showcase-grid";
+import Link from "next/link";
 
 const Insulation = () => {
   return (
@@ -19,20 +20,34 @@ const Insulation = () => {
         </header>
         <ShowcaseGrid
           items={[
-            <Image
-              src={ImgOne}
+            <Link
               key={"insulation-1"}
-              alt="insulation-3"
-              className="h-full"
-            />,
-            <Image key={"insulation-2"} src={ImgTwo} alt="insulation-3" />,
-            <Image key={"insulation-3"} src={ImgThree} alt="insulation-3" />,
-            <Image
-              src={ImgFour}
+              href="/services/monosi-taratsas/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgOne} alt="insulation-3" className="h-full" />
+            </Link>,
+            <Link
+              key={"insulation-2"}
+              href="/services/monosi-taratsas/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgTwo} alt="insulation-3" />
+            </Link>,
+            <Link
+              key={"insulation-3"}
+              href="/services/monosi-taratsas/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgThree} alt="insulation-3" />
+            </Link>,
+            <Link
               key={"insulation-4"}
-              alt="insulation-3"
-              className="h-full"
-            />,
+              href="/services/monosi-taratsas/"
+              className="hover:opacity-75 transition-opacity duration-200"
+            >
+              <Image src={ImgFour} alt="insulation-3" className="h-full" />
+            </Link>,
           ]}
         />
       </div>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import ImgOne from "@/assets/images/projects/project-1-1.jpg";
 import ImgTwo from "@/assets/images/projects/project-1-2.jpg";
@@ -15,27 +16,42 @@ const House = () => {
           </p>
         </header>
         <div className="mb-4">
-          <Image
-            src={ImgOne}
-            alt="house-1"
-            priority
-            placeholder="blur"
-            className="d-block w-100 h-auto"
-          />
+          <Link
+            href="/anakainisi/"
+            className="hover:opacity-75 transition-opacity duration-200"
+          >
+            <Image
+              src={ImgOne}
+              alt="house-1"
+              priority
+              placeholder="blur"
+              className="d-block w-100 h-auto"
+            />
+          </Link>
         </div>
         <div className="grid grid-cols-2 gap-4">
-          <Image
-            src={ImgTwo}
-            alt="house-2"
-            placeholder="blur"
-            className="d-block w-100 h-auto"
-          />
-          <Image
-            src={ImgThree}
-            alt="house-3"
-            placeholder="blur"
-            className="d-block w-100 h-auto"
-          />
+          <Link
+            href="/anakainisi/"
+            className="hover:opacity-75 transition-opacity duration-200"
+          >
+            <Image
+              src={ImgTwo}
+              alt="house-2"
+              placeholder="blur"
+              className="d-block w-100 h-auto"
+            />
+          </Link>
+          <Link
+            href="/anakainisi/"
+            className="hover:opacity-75 transition-opacity duration-200"
+          >
+            <Image
+              src={ImgThree}
+              alt="house-3"
+              placeholder="blur"
+              className="d-block w-100 h-auto"
+            />
+          </Link>
         </div>
       </div>
     </section>

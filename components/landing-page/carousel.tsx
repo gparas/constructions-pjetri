@@ -8,7 +8,7 @@ const Carousel = ({ images }: CarouselProps) => {
     <section className="my-12">
       <div className="container">
         <div
-          className="carousel  flex flex-nowrap gap-4"
+          className="carousel  flex flex-nowrap gap-4 rounded-md"
           style={{
             overflowX: "auto",
             scrollSnapType: "x mandatory",

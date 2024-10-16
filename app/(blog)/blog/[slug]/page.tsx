@@ -4,7 +4,6 @@ import { getAllPosts, getPostBySlug } from "@/lib/api";
 import Link from "next/link";
 import ReactMarkdown from "markdown-to-jsx";
 import PostHeader from "@/components/blog/post-header";
-import PostBanner from "@/components/blog/post-banner";
 
 export function generateMetadata({ params }: Params): Metadata {
   const post = getPostBySlug(params.slug);
@@ -44,7 +43,7 @@ export default async function Post({ params }: Params) {
 
   return (
     <article className="pt-12 pb-6">
-      <div className="container lg:max-w-4xl">
+      <div className="container lg:max-w-4xl text-lg">
         <PostHeader
           title={post.title}
           coverImage={post.coverImage}
@@ -64,22 +63,27 @@ export default async function Post({ params }: Params) {
               },
               p: {
                 component: "p",
-                props: { className: "text-lg mb-6" },
+                props: { className: "mb-6" },
               },
               ul: {
                 component: "ul",
-                props: { className: "text-lg mb-6" },
+                props: { className: "mb-6" },
               },
               a: {
                 component: Link,
                 props: { className: "text-primary" },
+              },
+              blockquote: {
+                component: "blockquote",
+                props: {
+                  className: "border-s-4 ps-4 text-xl font-semibold",
+                },
               },
             },
           }}
         >
           {post.content}
         </ReactMarkdown>
-        <PostBanner tags={post.tags} />
       </div>
     </article>
   );

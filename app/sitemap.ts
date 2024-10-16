@@ -28,6 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/services/monosi-taratsas/`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/projects/`,
       lastModified: new Date(),
       changeFrequency: "monthly",

@@ -28,7 +28,7 @@ const Features = ({ title, subtitle, features }: FeaturesProps) => {
                   feature.icon({
                     width: 64,
                     height: 64,
-                    className: "text-primary mx-auto",
+                    className: "text-primary mx-auto mb-2",
                   })
                 )}
                 <h3 className="mb-2 text-lg">{feature.title}</h3>

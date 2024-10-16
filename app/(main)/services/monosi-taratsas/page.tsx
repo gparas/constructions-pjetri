@@ -1,15 +1,16 @@
 import { Metadata } from "next";
+import LandingPage from "@/components/landing-page";
+import { CONFIG } from "./constants";
 
 export const metadata: Metadata = {
-  title: "",
-  description: "Δείτε τις υπηρεσίες που προσφέρουμε.",
+  title: "Μόνωση Ταράτσας",
+  description:
+    "Εξασφαλίστε μέγιστη εξοικονόμηση ενέργειας και προστασία από τις καιρικές συνθήκες",
   alternates: {
-    canonical: "/monosi-taratsas/",
+    canonical: "/services/monosi-taratsas/",
   },
 };
 
-const MonosiTaratsasPage = () => {
-  return <div>MonosiTaratsasPage</div>;
-};
+const MonosiTaratsasPage = () => <LandingPage {...CONFIG} />;
 
 export default MonosiTaratsasPage;
