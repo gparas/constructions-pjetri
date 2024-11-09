@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import dynamic from "next/dynamic";
 
 import {
@@ -7,6 +8,7 @@ import {
   StepsProps,
   FaqProps,
   BannerProps,
+  DescriptionProps,
 } from "./types";
 
 interface Props {
@@ -14,8 +16,10 @@ interface Props {
   features?: FeaturesProps;
   carousel?: CarouselProps;
   steps?: StepsProps;
+  description?: DescriptionProps;
   faq?: FaqProps;
   banner?: BannerProps;
+  children?: ReactNode;
 }
 
 const componentMap = {
@@ -24,14 +28,23 @@ const componentMap = {
   carousel: dynamic(() => import("./carousel")),
   steps: dynamic(() => import("./steps")),
   faq: dynamic(() => import("./faq")),
+  description: dynamic(() => import("./description")),
   banner: dynamic(() => import("./banner")),
 };
 
-const LandingPage = (props: Props) =>
-  Object.entries(props).map(([key, value]) => {
-    if (!key) return null;
-    const Component = componentMap[key as keyof typeof componentMap];
-    return <Component key={key} {...value} />;
-  });
+const LandingPage = ({ children, ...props }: Props) => {
+  return (
+    <>
+      {props.header && <componentMap.header {...props.header} />}
+      {props.features && <componentMap.features {...props.features} />}
+      {props.carousel && <componentMap.carousel {...props.carousel} />}
+      {props.steps && <componentMap.steps {...props.steps} />}
+      {props.description && <componentMap.description {...props.description} />}
+      {props.faq && <componentMap.faq {...props.faq} />}
+      {children}
+      {props.banner && <componentMap.banner {...props.banner} />}
+    </>
+  );
+};
 
 export default LandingPage;

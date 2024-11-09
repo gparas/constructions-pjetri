@@ -53,3 +53,7 @@ export interface BannerProps {
   description: string;
   href: string;
 }
+export interface DescriptionProps {
+  title: string;
+  content: string;
+}

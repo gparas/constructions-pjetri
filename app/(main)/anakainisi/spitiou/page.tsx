@@ -3,11 +3,10 @@ import LandingPage from "@/components/landing-page";
 import { CONFIG } from "./constants";
 
 export const metadata: Metadata = {
-  title: "Ολική Ανακαίνιση Μπάνιου",
-  description:
-    "Αναβαθμίστε το μπάνιο σας με εξειδικευμένες υπηρεσίες και κορυφαία ποιότητα κατασκευής.",
+  title: "Ολική Ανακαίνιση Σπιτιού",
+  description: "Αλλάξτε το Σπίτι Σας Με 550€/τ.μ.",
   alternates: {
-    canonical: "/anakainisi/mpaniou/",
+    canonical: "/anakainisi/spitiou/",
   },
 };
 
