@@ -37,9 +37,9 @@ const LandingPage = ({ children, ...props }: Props) => {
     <>
       {props.header && <componentMap.header {...props.header} />}
       {props.features && <componentMap.features {...props.features} />}
-      {props.carousel && <componentMap.carousel {...props.carousel} />}
       {props.steps && <componentMap.steps {...props.steps} />}
       {props.description && <componentMap.description {...props.description} />}
+      {props.carousel && <componentMap.carousel {...props.carousel} />}
       {props.faq && <componentMap.faq {...props.faq} />}
       {children}
       {props.banner && <componentMap.banner {...props.banner} />}

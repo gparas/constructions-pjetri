@@ -3,6 +3,12 @@ import PlumbingIcon from "@/icons/plumbing";
 import SquareMeterIcon from "@/icons/square-meter";
 import TrophyIcon from "@/icons/trophy";
 import Bathroom from "@/assets/images/anakainisi/bathroom-1.jpg";
+import First from "@/assets/images/anakainisi/mpaniou/img-1.jpg";
+import Second from "@/assets/images/anakainisi/mpaniou/img-2.jpg";
+import Third from "@/assets/images/anakainisi/mpaniou/img-3.jpg";
+import Fourth from "@/assets/images/anakainisi/mpaniou/img-4.jpg";
+import Fifth from "@/assets/images/anakainisi/mpaniou/img-5.jpg";
+import Sixth from "@/assets/images/anakainisi/mpaniou/img-6.jpg";
 
 const header = {
   title: "Ολική Ανακαίνιση Μπάνιου",
@@ -81,6 +87,35 @@ const steps = {
   ],
 };
 
+const carousel = {
+  images: [
+    {
+      src: First,
+      alt: "showcase-1",
+    },
+    {
+      src: Second,
+      alt: "showcase-2",
+    },
+    {
+      src: Third,
+      alt: "showcase-3",
+    },
+    {
+      src: Fourth,
+      alt: "showcase-4",
+    },
+    {
+      src: Fifth,
+      alt: "showcase-5",
+    },
+    {
+      src: Sixth,
+      alt: "showcase-6",
+    },
+  ],
+};
+
 const faq = {
   faqs: [
     {
@@ -126,6 +161,7 @@ export const CONFIG = {
   header,
   features,
   steps,
+  carousel,
   faq,
   banner,
 };
