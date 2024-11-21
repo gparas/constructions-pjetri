@@ -1,0 +1,20 @@
+.embla {
+  @apply overflow-hidden px-4;
+}
+.embla__container {
+  @apply flex gap-4;
+}
+.embla__slide {
+  @apply relative flex-grow-0 flex-shrink-0 min-w-0 h-60 md:h-80 basis-3/4 lg:basis-1/2;
+  transform: translate3d(0, 0, 0);
+}
+.embla__slide__img {
+  @apply rounded-2xl object-cover shadow-lg;
+}
+.embla__buttons {
+  @apply flex gap-2 p-4;
+}
+
+.embla__buttons > button {
+  @apply disabled:opacity-50 disabled:cursor-not-allowed;
+}
