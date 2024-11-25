@@ -56,7 +56,7 @@ type PropType = ComponentPropsWithRef<"button">;
 
 export const PrevButton: React.FC<PropType> = (props) => {
   return (
-    <button type="button" {...props}>
+    <button type="button" aria-label="prev-button" {...props}>
       <svg
         viewBox="0 0 24 24"
         width={32}
@@ -78,7 +78,7 @@ export const PrevButton: React.FC<PropType> = (props) => {
 
 export const NextButton: React.FC<PropType> = (props) => {
   return (
-    <button type="button" {...props}>
+    <button type="button" aria-label="next-button" {...props}>
       <svg
         viewBox="0 0 24 24"
         width={32}

@@ -32,6 +32,7 @@ const Carousel = ({ images }: CarouselProps) => {
                   alt={item.alt}
                   placeholder="blur"
                   fill
+                  sizes="50vw"
                   className={styles.embla__slide__img}
                 />
               </div>

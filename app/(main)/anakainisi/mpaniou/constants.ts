@@ -2,13 +2,13 @@ import MoneyIcon from "@/icons/money";
 import PlumbingIcon from "@/icons/plumbing";
 import SquareMeterIcon from "@/icons/square-meter";
 import TrophyIcon from "@/icons/trophy";
-import Bathroom from "@/assets/images/anakainisi/bathroom-1.jpg";
-import First from "@/assets/images/anakainisi/mpaniou/img-1.jpg";
-import Second from "@/assets/images/anakainisi/mpaniou/img-2.jpg";
-import Third from "@/assets/images/anakainisi/mpaniou/img-3.jpg";
-import Fourth from "@/assets/images/anakainisi/mpaniou/img-4.jpg";
-import Fifth from "@/assets/images/anakainisi/mpaniou/img-5.jpg";
-import Sixth from "@/assets/images/anakainisi/mpaniou/img-6.jpg";
+import Bathroom from "@/assets/images/anakainisi/bathroom-1.webp";
+import First from "@/assets/images/anakainisi/mpaniou/img-1.webp";
+import Second from "@/assets/images/anakainisi/mpaniou/img-2.webp";
+import Third from "@/assets/images/anakainisi/mpaniou/img-3.webp";
+import Fourth from "@/assets/images/anakainisi/mpaniou/img-4.webp";
+import Fifth from "@/assets/images/anakainisi/mpaniou/img-5.webp";
+import Sixth from "@/assets/images/anakainisi/mpaniou/img-6.webp";
 
 const header = {
   title: "Ολική Ανακαίνιση Μπάνιου",
